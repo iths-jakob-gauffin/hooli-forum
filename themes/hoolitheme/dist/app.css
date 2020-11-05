@@ -2,7 +2,15 @@
   color: hotpink;
 }
 
+.content p {
+  color: red;
+}
+
 body {
   background-color: blue;
+}
+
+.main-container {
+  padding: 0 300px;
 }
 
