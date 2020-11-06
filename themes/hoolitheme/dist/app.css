@@ -2,7 +2,11 @@
   color: hotpink;
 }
 
+#wpforo #wpforo-wrap .wpfl-4 .wpforo-category {
+  background-color: purple !important;
+}
+
 body {
-  background-color: yellow;
+  background-color: white;
 }
 
