@@ -93,7 +93,12 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
+// const name = (stuff) => {
+//     return stuff + "!";
+// };
+// const test = name("Hej");
+// console.log(test);
+alert("hej");
 
 /***/ }),
 
