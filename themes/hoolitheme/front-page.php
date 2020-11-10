@@ -7,7 +7,7 @@
             // echo the_title();
             
             ?>  
-            <h1>test</h1>
+            <h1 style="font-size: 1rem">test</h1>
                 <div class="main-container">
                     <main class="content">
                         <?php echo the_content(); ?>

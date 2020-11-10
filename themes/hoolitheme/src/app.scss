@@ -1,6 +1,10 @@
 @import "./header.scss";
 @import "./page.scss";
 
+html {
+    font-size: 10px;
+}
+
 body {
     background-color: blue;
 }
