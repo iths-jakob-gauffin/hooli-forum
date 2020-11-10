@@ -6,5 +6,8 @@
     <title>Document</title>
     <?php wp_head(); ?>
 </head>
-    <body <?php body_class(); ?>>
-        <h1>Header</h1>
+<body <?php body_class(); ?> >
+    <div class="main-container">
+        <h1 class="Header__Title">Hej</h1>
+    </div>
+    

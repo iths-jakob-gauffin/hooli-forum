@@ -1,12 +1,15 @@
 .Header__Title {
-  color: hotpink;
+    color: hotpink;
 }
 
-#wpforo #wpforo-wrap .wpfl-4 .wpforo-category {
-  background-color: purple !important;
+.content p {
+    color: red;
 }
 
 body {
-  background-color: white;
+    background-color: white;
 }
 
+.main-container {
+    padding: 0 300px;
+}

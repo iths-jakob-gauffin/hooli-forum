@@ -1,7 +1,10 @@
 @import "./header.scss";
-@import "./front-page.scss";
-@import "./profilestyle.scss";
+@import "./page.scss";
 
 body {
     background-color: white;
+}
+
+.main-container {
+    padding: 0 300px;
 }
