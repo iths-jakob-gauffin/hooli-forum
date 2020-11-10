@@ -1,5 +1,12 @@
 @import "./header.scss";
 @import "./page.scss";
+@import "./variables.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 html {
     font-size: 10px;
@@ -10,5 +17,15 @@ body {
 }
 
 .main-container {
-    padding: 0 300px;
+    padding: 0 2rem;
+
+    @include lg {
+        padding: 0 5rem;
+    }
+    @include xl {
+        padding: 0 15rem;
+    }
+    @include xxl {
+        padding: 0 25rem;
+    }
 }

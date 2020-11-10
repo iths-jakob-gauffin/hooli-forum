@@ -1,6 +1,8 @@
 <?php
 
 function hooliScripts(){
+    //fonts
+    wp_enqueue_style( 'googleFonts', '//fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
     wp_register_style('style', get_template_directory_uri() . '/dist/app.css', [], 1, 'all' );
     wp_enqueue_style('style');
@@ -13,3 +15,9 @@ function hooliScripts(){
 }
 
 add_action('wp_enqueue_scripts', 'hooliScripts');
+
+function hooliThemeFeatures(){
+    register_nav_menu( 'customWpForoMenu', 'Custom Wp Foro Menu' );
+}
+
+add_action('after_setup_theme', 'hooliThemeFeatures');

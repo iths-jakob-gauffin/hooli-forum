@@ -1,7 +1,28 @@
+.Header {
+  font-family: Varela Round;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.03em;
+  padding-top: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .Header__ImageWrapper {
-  width: 220px;
-  height: 110px;
-  border: 1px solid red;
+  position: relative;
+  width: 22rem;
+  height: 11rem;
+}
+
+.Header__ImageWrapper a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .Header__Image {
@@ -13,8 +34,84 @@
      object-position: left;
 }
 
+.Header #menu-wpforo-navigation {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.Header #menu-wpforo-navigation li {
+  margin: 0 1rem;
+}
+
+.Header #menu-wpforo-navigation li a {
+  text-align: center;
+  color: black;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s ease-out;
+  display: inline-block;
+}
+
+.Header #menu-wpforo-navigation li a:hover,
+.Header #menu-wpforo-navigation li a:focus {
+  color: #ff9393;
+}
+
+.Header__Form {
+  display: flex;
+}
+
+.Header__Form .Header__Icon {
+  font-size: 3.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.Header__Form .Header__Input {
+  font-family: Varela Round;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.03em;
+  border: none;
+  border-bottom: 2px solid black;
+  transition: all 0.3s ease-out;
+  width: 10rem;
+}
+
+@media (min-width: 992px) {
+  .Header__Form .Header__Input {
+    width: 15.9rem;
+  }
+}
+
+.Header__Form .Header__Input:focus {
+  border-color: #ff9393;
+}
+
+.Header__SearchField:hover .Header__Form .Header__Icon {
+  color: #ff9393;
+}
+
+.Header__SearchField:hover .Header__Form .Header__Input {
+  border-color: #ff9393;
+}
+
+.Header__Input:focus + .Header__SearchLabel .Header__Icon {
+  color: #ff9393;
+}
+
 .content p {
   color: red;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -26,6 +123,24 @@ body {
 }
 
 .main-container {
-  padding: 0 300px;
+  padding: 0 2rem;
+}
+
+@media (min-width: 992px) {
+  .main-container {
+    padding: 0 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-container {
+    padding: 0 15rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-container {
+    padding: 0 25rem;
+  }
 }
 

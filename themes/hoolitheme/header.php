@@ -9,10 +9,29 @@
 <body <?php body_class(); ?> >
     <div class="main-container">
         <header class="Header">
-            <!-- <h1 class="Header__Title">Hej</h1> -->
+            
             <div class="Header__ImageWrapper">
-                <a href="<?php echo site_url('/')?>"></a>
+                <a href="<?php echo site_url('/')?>" title="Tillbaka till startsidan"></a>
                 <img src="<?php echo get_theme_file_uri('/dist/images/Musikfolk.svg'); ?>" alt="Musikfolk logotype" class="Header__Image">
+            </div>
+
+            <nav class="Header__Nav">
+                <?php 
+                    wp_nav_menu( array(
+                        'theme_location' => 'customWpForoMenu'
+                        ) )
+                ?> 
+            </nav>
+
+            <div class="Header__SearchField">
+                <div class="wpf-search-form">
+                    <form class="Header__Form" action="http://hooliforum.local/community/" method="get">
+                        <input id="wpForoSearch" class="wpf-search-field Header__Input" name="wpfs" type="text" value="" style="margin-right:10px;">
+                        <label class="Header__SearchLabel" for="wpForoSearch">
+                            <i class="fas fa-search Header__Icon" aria="hidden"></i>
+                        </label>
+                    </form>
+                </div>
             </div>
 
         </header>
