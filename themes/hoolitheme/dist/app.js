@@ -90,28 +90,26 @@
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_example_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/example.js */ "./src/components/example.js");
 // const name = (stuff) => {
 //     return stuff + "!";
 // };
 // const test = name("Hej");
 // console.log(test);
 // alert("hej");
-// Import components.
- // Initialize your components on DOM Ready.
-
-$(document).ready(function () {
-  console.log("saker händer");
-  _components_example_js__WEBPACK_IMPORTED_MODULE_0__["default"].init({
-    setting: "New setting"
-  });
-});
-alert("nsakldnkas");
+// // Import components.
+// import Example from "./components/example.js";
+// // Initialize your components on DOM Ready.
+// $(document).ready(() => {
+//     console.log("saker händer");
+//     Example.init({
+//         setting: "New setting",
+//     });
+// });
+// alert("nsakldnkas");
+console.log("hej från javascriptet");
 
 /***/ }),
 
@@ -123,34 +121,6 @@ alert("nsakldnkas");
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./src/components/example.js":
-/*!***********************************!*\
-  !*** ./src/components/example.js ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var Example = {
-  settings: {
-    setting: "Initial value"
-  },
-  init: function init(options) {
-    // Do some init stuff like process settings.
-    this.settings.setting = options.setting; // Run your custom code.
-
-    this.startRunningYourCode();
-  },
-  startRunningYourCode: function startRunningYourCode() {
-    // Your custom code goes here.
-    console.log(this.settings.setting);
-  }
-};
-/* harmony default export */ __webpack_exports__["default"] = (Example);
 
 /***/ }),
 

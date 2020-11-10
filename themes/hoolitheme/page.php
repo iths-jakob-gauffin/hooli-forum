@@ -8,7 +8,6 @@
             
             ?>  
                 <div class="main-container">
-                    <button value="klicka">hej</button>
                     <main class="content">
                         <?php echo the_content(); 
                             echo get_field('under_titel');
