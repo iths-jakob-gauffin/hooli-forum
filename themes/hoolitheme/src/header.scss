@@ -1,12 +1,8 @@
 @import "./variables.scss";
 
 .Header {
-    font-family: Varela Round;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 2rem;
-    line-height: 2.4rem;
-    letter-spacing: -0.03em;
+    @include navText;
+
     padding-top: 8rem;
     padding-bottom: 0.5rem;
     display: flex;

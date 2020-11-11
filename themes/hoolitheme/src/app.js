@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-alert("hej");
-=======
 // const name = (stuff) => {
 //     return stuff + "!";
 // };
@@ -25,4 +22,3 @@ alert("hej");
 // alert("nsakldnkas");
 
 console.log("hej från javascriptet");
->>>>>>> main
