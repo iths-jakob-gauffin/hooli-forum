@@ -16,7 +16,6 @@ function hooliScripts(){
     $url = home_url( add_query_arg( null, null ));
 
     if(is_front_page() OR $url === site_url('community/') OR $url === site_url('community/senaste-inlaggen/') ){
-    {
         wp_register_style('extraStyle', get_template_directory_uri() . '/dist/extraStyle.css', [], 1, 'all');
         wp_enqueue_style('extraStyle');
     }
@@ -27,6 +26,20 @@ add_action('wp_enqueue_scripts', 'hooliScripts');
 
 function hooliThemeFeatures(){
     register_nav_menu( 'customWpForoMenu', 'Custom Wp Foro Menu' );
+    register_nav_menu( 'customWpForoMenuLoggedIn', 'Custom Wp Foro Menu LOGGED IN' );
+
 }
 
 add_action('after_setup_theme', 'hooliThemeFeatures');
+
+    //Redirecta subscribers som loggar in till hemsidan
+
+    function redirectToFrontend(){
+        $ourMember = wp_get_current_user();
+    
+        if(count($ourMember->roles) == 1 AND $ourMember->roles[0] == 'subscriber'){
+            wp_redirect(site_url('/'));
+            exit;
+        }
+    }
+    add_action('admin_init', 'redirectToFrontend');

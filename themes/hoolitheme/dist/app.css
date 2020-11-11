@@ -6,6 +6,7 @@
   line-height: 2.4rem;
   letter-spacing: -0.03em;
   padding-top: 8rem;
+  padding-bottom: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,17 +35,20 @@
      object-position: left;
 }
 
-.Header #menu-wpforo-navigation {
+.Header #menu-wpforo-navigation,
+.Header #menu-wpforo-menu-logged-in {
   display: flex;
   justify-content: center;
   list-style: none;
 }
 
-.Header #menu-wpforo-navigation li {
+.Header #menu-wpforo-navigation li,
+.Header #menu-wpforo-menu-logged-in li {
   margin: 0 1rem;
 }
 
-.Header #menu-wpforo-navigation li a {
+.Header #menu-wpforo-navigation li a,
+.Header #menu-wpforo-menu-logged-in li a {
   text-align: center;
   color: black;
   padding: 0.5rem;
@@ -55,7 +59,9 @@
 }
 
 .Header #menu-wpforo-navigation li a:hover,
-.Header #menu-wpforo-navigation li a:focus {
+.Header #menu-wpforo-navigation li a:focus,
+.Header #menu-wpforo-menu-logged-in li a:hover,
+.Header #menu-wpforo-menu-logged-in li a:focus {
   color: #ff9393;
 }
 
@@ -64,6 +70,7 @@
 }
 
 .Header__Form .Header__Icon {
+  color: black;
   font-size: 3.2rem;
   cursor: pointer;
   transition: all 0.3s ease-out;
@@ -102,6 +109,34 @@
 
 .Header__Input:focus + .Header__SearchLabel .Header__Icon {
   color: #ff9393;
+}
+
+.Header__LoggedInWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.Header__LoggedInWrapper .Header__SearchLabel {
+  margin-right: 3rem;
+}
+
+.Header__LoggedInWrapper .Header__Icon {
+  font-size: 3.2rem;
+}
+
+.Header__LoggedInWrapper .Header__IconLink {
+  color: black;
+  transition: color 0.3s ease-out;
+}
+
+.Header__LoggedInWrapper .Header__IconLink:hover,
+.Header__LoggedInWrapper .Header__IconLink:focus {
+  color: #ff9393;
+}
+
+.Header__LoggedInWrapper .Header__IconLink:not(:last-child) {
+  margin-left: 2rem;
+  margin-right: 3rem;
 }
 
 .content p {
