@@ -26,6 +26,15 @@ $mf-pink: #ff9393;
     letter-spacing: -0.03em;
 }
 
+@mixin h2 {
+    font-family: Varela Round;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    letter-spacing: -0.03em;
+}
+
 @mixin p {
     font-family: Varela Round;
     font-style: normal;

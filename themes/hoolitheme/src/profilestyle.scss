@@ -13,12 +13,12 @@
 
     .h-header .profile-stat-data-item{
         @include h1;
-        color: red;
+        color: red !important;
     }
 
     .wpf-profile-info-wrap {
         display: flex;
-        padding-top: 0;
-        left: 0px;
+        padding-top: 0 !important;
+        left: 0px !important;
     }
 }
