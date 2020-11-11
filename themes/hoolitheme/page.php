@@ -14,11 +14,6 @@
                             // echo var_dump(get_field('background_image'));
 
                         ?>
-                        <img src="<?php 
-                        $image = get_field('background_image');
-                        echo $image['sizes']['våregenstorlek'];
-                        // echo $image->url;
-                        
                         
                         ?>">
                     </main>
