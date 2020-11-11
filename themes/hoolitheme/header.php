@@ -9,6 +9,6 @@
 </head>
 <body <?php body_class(); ?> >
     <div class="main-container">
-        <h1 class="Header__Title">Hejdå</h1>
+        <h1 class="Header__Title"></h1>
     </div>
     
