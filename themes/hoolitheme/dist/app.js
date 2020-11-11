@@ -86,14 +86,34 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/addPlaceholder.js":
+/*!*******************************!*\
+  !*** ./src/addPlaceholder.js ***!
+  \*******************************/
+/*! exports provided: addPlaceholder */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addPlaceholder", function() { return addPlaceholder; });
+var addPlaceholder = function addPlaceholder() {
+  document.querySelector("#user_login").placeholder = "Användarnamn";
+  document.querySelector("#user_pass").placeholder = "Lösenord";
+};
+
+/***/ }),
+
 /***/ "./src/app.js":
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// const name = (stuff) => {
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _addPlaceholder_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addPlaceholder.js */ "./src/addPlaceholder.js");
+ // const name = (stuff) => {
 //     return stuff + "!";
 // };
 // const test = name("Hej");
@@ -109,6 +129,9 @@
 //     });
 // });
 // alert("nsakldnkas");
+//Add placeholders to input fields in login page
+
+Object(_addPlaceholder_js__WEBPACK_IMPORTED_MODULE_0__["addPlaceholder"])();
 console.log("hej från javascriptet");
 
 /***/ }),

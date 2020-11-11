@@ -1,3 +1,5 @@
+import { addPlaceholder } from "./addPlaceholder.js";
+
 // const name = (stuff) => {
 //     return stuff + "!";
 // };
@@ -20,5 +22,9 @@
 // });
 
 // alert("nsakldnkas");
+
+
+//Add placeholders to input fields in login page
+addPlaceholder();
 
 console.log("hej från javascriptet");
