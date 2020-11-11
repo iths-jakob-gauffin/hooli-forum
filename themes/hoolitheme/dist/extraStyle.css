@@ -1,3 +1,29 @@
 body {
-    background-color: green !important;
+    /* background-color: green !important; */
+}
+
+#wpforo #wpforo-wrap .wpforo-subtop {
+    display: none !important;
+}
+
+#wpforo #wpforo-wrap {
+    padding-top: 0 !important;
+}
+
+#wpforo #wpforo-wrap #wpforo-title {
+    display: none !important;
+}
+
+#wpforo #wpforo-wrap .wpf-head-bar {
+    padding-top: 0;
+    display: none;
+}
+
+#wpforo #wpforo-wrap .wpforo-recent-wrap .wpforo-recent-content {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.Header {
+    padding-bottom: 1.5rem;
 }
