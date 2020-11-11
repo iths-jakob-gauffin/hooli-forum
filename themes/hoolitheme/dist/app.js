@@ -103,6 +103,27 @@ var addPlaceholder = function addPlaceholder() {
 
 /***/ }),
 
+/***/ "./src/addTopBorder.js":
+/*!*****************************!*\
+  !*** ./src/addTopBorder.js ***!
+  \*****************************/
+/*! exports provided: addTopBorder */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addTopBorder", function() { return addTopBorder; });
+var addTopBorder = function addTopBorder() {
+  var form = document.querySelector("#loginform");
+  var div = form.insertBefore(document.createElement("div"), form.firstChild);
+  div.classList.add("top-border");
+  var p = document.createElement("p");
+  p.innerText = "Logga in";
+  div.append(p);
+};
+
+/***/ }),
+
 /***/ "./src/app.js":
 /*!********************!*\
   !*** ./src/app.js ***!
@@ -113,6 +134,8 @@ var addPlaceholder = function addPlaceholder() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _addPlaceholder_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addPlaceholder.js */ "./src/addPlaceholder.js");
+/* harmony import */ var _addTopBorder_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./addTopBorder.js */ "./src/addTopBorder.js");
+
  // const name = (stuff) => {
 //     return stuff + "!";
 // };
@@ -132,6 +155,7 @@ __webpack_require__.r(__webpack_exports__);
 //Add placeholders to input fields in login page
 
 Object(_addPlaceholder_js__WEBPACK_IMPORTED_MODULE_0__["addPlaceholder"])();
+Object(_addTopBorder_js__WEBPACK_IMPORTED_MODULE_1__["addTopBorder"])();
 console.log("hej från javascriptet");
 
 /***/ }),

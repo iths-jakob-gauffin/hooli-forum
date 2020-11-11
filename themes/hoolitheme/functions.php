@@ -19,7 +19,7 @@ function hooliScripts(){
 }
  
 add_action('wp_enqueue_scripts', 'hooliScripts');
-//För att kunna ändra style på login-sidan, i wp-login.scss
+//För att kunna ändra style på login-sidan
 add_action('login_enqueue_scripts', 'hooliScripts');
 
 

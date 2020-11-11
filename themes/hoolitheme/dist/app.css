@@ -115,9 +115,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 0 46px 0;
 }
 
-#login form :first-child label {
+#login form p:nth-child(2) label {
   display: none;
 }
 
@@ -153,6 +154,19 @@
 #login form input {
   border-color: lightgray;
   font-size: 14px;
+}
+
+#login form .top-border {
+  width: 100%;
+  background-color: #ff9393;
+  margin-bottom: 5rem;
+  padding: 7px 12px;
+}
+
+#login form .top-border p {
+  color: white;
+  font-size: 14px;
+  padding: 5px 0;
 }
 
 #login #nav {
