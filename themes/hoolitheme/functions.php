@@ -11,6 +11,11 @@ function hooliScripts(){
 
     wp_register_script('app', get_template_directory_uri() . '/dist/app.js', ['jquery'], 1, true);
     wp_enqueue_script('app');
+
+    if(is_home()){
+        wp_register_style('extraStyle', get_template_directory_uri() . '/dist/extraStyle.css', [], 1, 'all');
+        wp_enqueue_style('extraStyle');
+    }
     
 }
 
