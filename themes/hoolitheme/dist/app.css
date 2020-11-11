@@ -105,8 +105,8 @@
 }
 
 #login {
-  width: 100vw;
-  padding: 20rem;
+  width: 1028px;
+  padding: 10rem 5rem;
 }
 
 #login form {
@@ -114,18 +114,24 @@
   border: none;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+#login form :first-child label {
+  display: none;
 }
 
 #login form #wp-submit {
-  background-color: #FF9393;
+  background-color: #ff9393;
   border: none;
   border-radius: 0;
-  width: 80%;
+  width: 100%;
 }
 
 #login form .submit {
   display: flex;
   justify-content: center;
+  width: 358px;
 }
 
 #login form .forgetmenot {
@@ -141,10 +147,21 @@
 #login form #user_login,
 #login form #user_pass {
   border-radius: 0;
+  width: 410px;
+}
+
+#login form input {
+  border-color: lightgray;
+  font-size: 14px;
+}
+
+#login #nav {
+  display: none;
 }
 
 #login .button.wp-hide-pw .dashicons {
   color: grey;
+  margin-right: 1rem;
 }
 
 .content p {
