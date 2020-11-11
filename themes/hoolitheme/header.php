@@ -26,14 +26,13 @@
                         'theme_location' => 'customWpForoMenu'
                         ) )
                 ?> 
-<<<<<<< HEAD
                 </nav>
 
                 <div class="Header__LoggedInWrapper">
 
                     <div class="Header__SearchField">
                         <div class="wpf-search-form">
-                            <form class="Header__Form" action="http://hooliforum.local/community/" method="get">
+                            <form class="Header__Form" action="<?php echo site_url('community'); ?>" method="get">
                                 <input id="wpForoSearch" class="wpf-search-field Header__Input" name="wpfs" type="text" value="" style="margin-right:10px;">
                                 <label class="Header__SearchLabel" for="wpForoSearch">
                                     <i class="fas fa-search Header__Icon" aria="hidden"></i>
@@ -56,18 +55,6 @@
                         <i class="fas fa-sign-out-alt Header__Icon" aria="hidden"></i>
                     </a>
                     
-=======
-            </nav>
-
-            <div class="Header__SearchField">
-                <div class="wpf-search-form">
-                    <form class="Header__Form" action="<?php echo site_url('community'); ?>" method="get">
-                        <input id="wpForoSearch" class="wpf-search-field Header__Input" name="wpfs" type="text" value="" style="margin-right:10px;">
-                        <label class="Header__SearchLabel" for="wpForoSearch">
-                            <i class="fas fa-search Header__Icon" aria="hidden"></i>
-                        </label>
-                    </form>
->>>>>>> linus
                 </div>
 
             <?php                        
