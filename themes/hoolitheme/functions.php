@@ -15,7 +15,7 @@ function hooliScripts(){
     // Add extra css on certain pages to remove unwanted breadcrumbs and title in wpForo    
     $url = home_url( add_query_arg( null, null ));
 
-    if(is_front_page() OR $url === site_url('community/') OR $url === site_url('community/senaste-inlaggen/') ){
+    if(is_front_page() OR $url === site_url('community/') OR $url === site_url('community/senaste-inlaggen/') )
     {
         wp_register_style('extraStyle', get_template_directory_uri() . '/dist/extraStyle.css', [], 1, 'all');
         wp_enqueue_style('extraStyle');
