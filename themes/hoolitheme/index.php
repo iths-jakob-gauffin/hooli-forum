@@ -1,17 +1,4 @@
 <?php get_header(); ?>
-<<<<<<< HEAD
-<?php 
-  
-  while(have_posts()){
-    the_post();
-
-    echo the_title();
-    echo the_content();
-  }
-  ?>
-
-<?php get_footer(); ?>
-=======
     <?php 
     
     while(have_posts()){
@@ -33,4 +20,3 @@
     ?>
 
 <?php get_footer(); ?>
->>>>>>> main
