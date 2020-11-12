@@ -105,8 +105,9 @@
 }
 
 #login {
-  width: 1028px;
-  padding: 10rem 5rem;
+  width: 100%;
+  margin: 5rem auto;
+  padding: 0 1rem;
 }
 
 #login form {
@@ -132,7 +133,7 @@
 #login form .submit {
   display: flex;
   justify-content: center;
-  width: 358px;
+  width: 180px;
 }
 
 #login form .forgetmenot {
@@ -148,7 +149,8 @@
 #login form #user_login,
 #login form #user_pass {
   border-radius: 0;
-  width: 410px;
+  width: 224px;
+  margin: 0 0 16px 0;
 }
 
 #login form input {
@@ -176,6 +178,33 @@
 #login .button.wp-hide-pw .dashicons {
   color: grey;
   margin-right: 1rem;
+}
+
+@media (min-width: 576px) {
+  #login {
+    width: 670px;
+  }
+
+  #login form #user_login,
+  #login form #user_pass {
+    width: 320px;
+  }
+
+  #login form .submit {
+    width: 256px;
+  }
+}
+
+@media (min-width: 768px) {
+  #login {
+    width: 840px;
+  }
+}
+
+@media (min-width: 992px) {
+  #login {
+    width: 1028px;
+  }
 }
 
 .content p {
