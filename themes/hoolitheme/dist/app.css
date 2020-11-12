@@ -107,6 +107,7 @@
 
 .content p {
   color: red;
+<<<<<<< HEAD
 }
 
 .wpforo-profile-wrap .wpf-profile-plugin-menu {
@@ -132,6 +133,8 @@
   display: flex;
   padding-top: 0 !important;
   left: 0px !important;
+=======
+>>>>>>> main
 }
 
 * {
