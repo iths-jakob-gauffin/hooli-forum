@@ -143,20 +143,14 @@
   color: red;
 }
 
-.wpforo-profile-wrap .wpf-profile-plugin-menu {
-  display: none;
-  background: none;
-  background-color: #F6F6F6;
-}
-
 .wpforo-profile-wrap .wpfy {
   display: none;
 }
 
 .wpforo-profile-wrap .wpf-profile-info-wrap {
   display: flex;
-  padding-top: 0 !important;
-  left: 30px !important;
+  padding: 20px !important;
+  left: 10px !important;
 }
 
 .wpforo-profile-wrap #wpforo #wpforo-wrap .wpforo-profile-wrap .wpforo-profile-head {
@@ -164,16 +158,68 @@
   background-color: #F6F6F6 !important;
 }
 
-.wpforo-profile-wrap #wpforo #wpforo-wrap .wpforo-profile-wrap .h-header-info {
+#wpforo #wpforo-wrap .wpforo-profile-wrap .wpforo-profile-head {
   display: flex !important;
+  flex-direction: column-reverse !important;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+  background-color: #F6F6F6 !important;
 }
 
-.wpforo-profile-wrap #wpforo #wpforo-wrap .wpforo-profile-wrap .h-top {
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-footer {
+  margin: 0 !important;
+  color: white !important;
+  background-color: #ff9393 !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-footer:hover,
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-footer:visited,
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-footer:active {
+  color: #ff9393 !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-subtop {
+  display: none !important;
+}
+
+.wpf-profile-plugin-menu {
+  display: none;
+  background: none;
+  background-color: #F6F6F6;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-header-info {
+  display: flex !important;
+  justify-content: flex-end !important;
+  padding-left: 20px !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-top {
   align-self: flex-end !important;
 }
 
-.wpforo-profile-wrap #wpforo #wpforo-wrap .wpforo-profile-wrap .wpf-profile-badge {
+#wpforo #wpforo-wrap .wpforo-profile-wrap .wpf-profile-badge {
   display: none !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .profile-rating-bar-wrap .rating-bar-cell {
+  background-color: #ff9393 !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-picture .avatar {
+  box-shadow: none !important;
+}
+
+#wpforo #wpforo-wrap .wpf-field .wpf-label {
+  color: #333333 !important;
+}
+
+#wpforo #wpforo-wrap .wpf-sbtn .wpf-sbtn-title span {
+  color: #333333 !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .wpf-username {
+  color: #333333 !important;
 }
 
 * {
