@@ -87,6 +87,7 @@
   border-bottom: 2px solid black;
   transition: all 0.3s ease-out;
   width: 10rem;
+  color: black;
 }
 
 @media (min-width: 992px) {
@@ -95,20 +96,28 @@
   }
 }
 
+.Header__Form .Header__Input:hover,
 .Header__Form .Header__Input:focus {
   border-color: #ff9393;
 }
 
-.Header__SearchField:hover .Header__Form .Header__Icon {
+.Header__Form .Header__SearchButton {
+  background: none;
+  border: none;
+}
+
+.Header__Form .Header__SearchButton .Header__Icon {
+  color: black;
+}
+
+.Header__Form .Header__SearchButton .Header__Icon:hover,
+.Header__Form .Header__SearchButton .Header__Icon:focus {
   color: #ff9393;
 }
 
-.Header__SearchField:hover .Header__Form .Header__Input {
-  border-color: #ff9393;
-}
-
-.Header__Input:focus + .Header__SearchLabel .Header__Icon {
-  color: #ff9393;
+.Header__SearchButton {
+  background: none;
+  border: none;
 }
 
 .Header__LoggedInWrapper {
@@ -135,7 +144,7 @@
 }
 
 .Header__LoggedInWrapper .Header__IconLink:not(:last-child) {
-  margin-left: 2rem;
+  margin-left: 4rem;
   margin-right: 3rem;
 }
 

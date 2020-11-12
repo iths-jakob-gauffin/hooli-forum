@@ -30,16 +30,7 @@
 
                 <div class="Header__LoggedInWrapper">
 
-                    <div class="Header__SearchField">
-                        <div class="wpf-search-form">
-                            <form class="Header__Form" action="<?php echo site_url('community'); ?>" method="get">
-                                <input id="wpForoSearch" class="wpf-search-field Header__Input" name="wpfs" type="text" value="" style="margin-right:10px;">
-                                <label class="Header__SearchLabel" for="wpForoSearch">
-                                    <i class="fas fa-search Header__Icon" aria="hidden"></i>
-                                </label>
-                            </form>
-                        </div>
-                    </div>
+                    <?php echo get_template_part( '/templates/header-searchField'); ?>
 
                     <a href="<?php 
                         $user = wp_get_current_user(); 
@@ -69,18 +60,7 @@
                 ?> 
                 </nav>
 
-                <div class="Header__SearchField">
-                    <div class="wpf-search-form">
-                        <form class="Header__Form" action="<?php echo site_url('community'); ?>" method="get">
-                            <input id="wpForoSearch" class="wpf-search-field Header__Input" name="wpfs" type="text" value="" style="margin-right:10px;">
-                            <label class="Header__SearchLabel" for="wpForoSearch">
-                                <a href="">
-                                    <i class="fas fa-search Header__Icon" aria="hidden"></i>
-                                </a>
-                            </label>
-                        </form>
-                    </div>
-                </div>                
+                <?php echo get_template_part('/templates/header-searchField'); ?>                
 
             <?php
             }
