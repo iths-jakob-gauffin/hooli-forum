@@ -30,7 +30,8 @@
         object-position: left;
     }
 
-    #menu-wpforo-navigation {
+    #menu-wpforo-navigation,
+    #menu-wpforo-menu-logged-in {
         display: flex;
         justify-content: center;
         list-style: none;
@@ -59,6 +60,7 @@
         display: flex;
 
         .Header__Icon {
+            color: black;
             font-size: 3.2rem;
             cursor: pointer;
             transition: all 0.3s ease-out;
@@ -100,5 +102,33 @@
 
     &__Input:focus + &__SearchLabel &__Icon {
         color: $mf-pink;
+    }
+
+    &__LoggedInWrapper {
+        display: flex;
+        align-items: center;
+
+        .Header__SearchLabel {
+            margin-right: 3rem;
+        }
+
+        .Header__Icon {
+            font-size: 3.2rem;
+        }
+
+        .Header__IconLink {
+            color: black;
+            transition: color 0.3s ease-out;
+
+            &:hover,
+            &:focus {
+                color: $mf-pink;
+            }
+        }
+
+        .Header__IconLink:not(:last-child) {
+            margin-left: 2rem;
+            margin-right: 3rem;
+        }
     }
 }

@@ -26,6 +26,20 @@ add_action('wp_enqueue_scripts', 'hooliScripts');
 
 function hooliThemeFeatures(){
     register_nav_menu( 'customWpForoMenu', 'Custom Wp Foro Menu' );
+    register_nav_menu( 'customWpForoMenuLoggedIn', 'Custom Wp Foro Menu LOGGED IN' );
+
 }
 
 add_action('after_setup_theme', 'hooliThemeFeatures');
+
+    //Redirecta subscribers som loggar in till hemsidan
+
+    function redirectToFrontend(){
+        $ourMember = wp_get_current_user();
+    
+        if(count($ourMember->roles) == 1 AND $ourMember->roles[0] == 'subscriber'){
+            wp_redirect(site_url('/'));
+            exit;
+        }
+    }
+    add_action('admin_init', 'redirectToFrontend');
