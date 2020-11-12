@@ -1,7 +1,9 @@
 
-export const addTopBorder = () => {
+const addTopBorder = (elementToPick) => {
 
-    const form = document.querySelector("#loginform");
+    console.log("topborder");
+
+    const form = document.querySelector(elementToPick);
     const div = form.insertBefore(document.createElement("div"), form.firstChild);
     div.classList.add("top-border");
 
@@ -10,3 +12,12 @@ export const addTopBorder = () => {
     div.append(p);
 
 }
+
+
+if(window.location.pathname === '/wp-login.php'){
+    addTopBorder("#loginform");
+} else {
+    addTopBorder(".wpforo-login-wrap");
+}
+
+

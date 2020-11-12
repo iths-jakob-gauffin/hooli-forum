@@ -27,7 +27,10 @@ import { addTopBorder} from "./addTopBorder.js";
 
 
 //Add placeholders to input fields in login page
-addPlaceholder();
-addTopBorder();
+// addPlaceholder();
+// addTopBorder("#loginform");
+
+//app.js körs på varje sida nu. Hittar inte alla element då de kanske tillhör en annan sida. 
+// addTopBorder(".wpforo-login-content");
 
 console.log("hej från javascriptet");

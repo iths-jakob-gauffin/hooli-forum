@@ -246,6 +246,40 @@
   color: red;
 }
 
+.wpforo-login-wrap .top-border {
+  width: 100%;
+  background-color: #ff9393;
+  margin-bottom: 5rem !important;
+  padding: 7px 12px !important;
+}
+
+.wpforo-login-wrap .top-border p {
+  color: white !important;
+  font-size: 14px !important;
+  padding: 5px 0 !important;
+}
+
+.wpforo-login-wrap .wpforo-login-content {
+  border: none !important;
+}
+
+.wpforo-login-wrap .wpforo-login-content h3 {
+  display: none;
+}
+
+.wpforo-login-wrap .wpforo-login-content .wpf-forgot-pass {
+  display: none;
+}
+
+.wpforo-login-wrap .wpforo-login-content .wpforo-table,
+.wpforo-login-wrap .wpforo-login-content .wpf-field {
+  background-color: #F6F6F6 !important;
+}
+
+.wpforo-login-wrap .wpforo-login-content .wpf-login-text {
+  background-color: white;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
