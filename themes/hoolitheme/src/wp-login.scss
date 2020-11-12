@@ -1,0 +1,105 @@
+@import "./variables.scss";
+
+#login {
+    width: 100%;
+    margin: 5rem auto;
+    padding: 0 1rem;
+
+    form {
+        background-color: #F6F6F6;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding:0 0 46px 0;
+
+        p:nth-child(2) label {
+            display: none;
+        }
+
+        #wp-submit {
+            background-color: $mf-pink;
+            border: none;
+            border-radius: 0;
+            width: 100%;
+        }
+
+        .submit {
+            display: flex;
+            justify-content: center;
+            width: 180px;
+        }
+
+        .forgetmenot {
+            text-align: center;
+            padding-bottom: 0.5rem;
+        }
+
+        .user-pass-wrap label,
+        #user_login label {
+            display: none;
+        }
+
+        #user_login, #user_pass {
+            border-radius: 0;
+            width: 224px;
+            margin: 0 0 16px 0;
+        }
+
+        input {
+            border-color: lightgray;
+            font-size: 14px;
+        }
+
+        .top-border {
+            width: 100%;
+            background-color: $mf-pink;
+            margin-bottom: 5rem;
+            padding: 7px 12px;
+
+            p {
+                color: white;
+                font-size: 14px;
+                padding: 5px 0;
+            }
+        }
+    }
+
+    #nav {
+        display: none;
+    }
+
+    .button.wp-hide-pw {
+        .dashicons {
+            color: grey;
+            margin-right: 1rem;
+        }
+    }
+}
+
+@include sm {
+    #login {
+        width: 670px;
+
+        form #user_login, 
+        form #user_pass {
+            width: 320px;
+        }
+
+        form .submit {
+            width: 256px;
+        }
+    }
+}
+
+@include md {
+    #login {
+        width: 840px;
+    }
+}
+
+@include lg {
+    #login {
+        width: 1028px;
+    }
+}

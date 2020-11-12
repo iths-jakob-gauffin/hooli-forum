@@ -9,13 +9,8 @@
             ?>  
                 <div class="main-container">
                     <main class="content">
-                        <?php echo the_content(); 
-                            echo get_field('under_titel');
-                            // echo var_dump(get_field('background_image'));
-
+                        <?php echo the_content();
                         ?>
-                        
-                        ?>">
                     </main>
                 </div>
             <?php

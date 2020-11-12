@@ -86,14 +86,57 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/addPlaceholder.js":
+/*!*******************************!*\
+  !*** ./src/addPlaceholder.js ***!
+  \*******************************/
+/*! exports provided: addPlaceholder */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addPlaceholder", function() { return addPlaceholder; });
+var addPlaceholder = function addPlaceholder() {
+  document.querySelector("#user_login").placeholder = "Användarnamn";
+  document.querySelector("#user_pass").placeholder = "Lösenord";
+};
+
+/***/ }),
+
+/***/ "./src/addTopBorder.js":
+/*!*****************************!*\
+  !*** ./src/addTopBorder.js ***!
+  \*****************************/
+/*! exports provided: addTopBorder */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addTopBorder", function() { return addTopBorder; });
+var addTopBorder = function addTopBorder() {
+  var form = document.querySelector("#loginform");
+  var div = form.insertBefore(document.createElement("div"), form.firstChild);
+  div.classList.add("top-border");
+  var p = document.createElement("p");
+  p.innerText = "Logga in";
+  div.append(p);
+};
+
+/***/ }),
+
 /***/ "./src/app.js":
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// const name = (stuff) => {
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _addPlaceholder_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addPlaceholder.js */ "./src/addPlaceholder.js");
+/* harmony import */ var _addTopBorder_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./addTopBorder.js */ "./src/addTopBorder.js");
+
+ // const name = (stuff) => {
 //     return stuff + "!";
 // };
 // const test = name("Hej");
@@ -109,6 +152,10 @@
 //     });
 // });
 // alert("nsakldnkas");
+//Add placeholders to input fields in login page
+
+Object(_addPlaceholder_js__WEBPACK_IMPORTED_MODULE_0__["addPlaceholder"])();
+Object(_addTopBorder_js__WEBPACK_IMPORTED_MODULE_1__["addTopBorder"])();
 console.log("hej från javascriptet");
 
 /***/ }),
@@ -131,8 +178,8 @@ console.log("hej från javascriptet");
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Jakob\Local Sites\hooliforum\app\public\wp-content\themes\hoolitheme\src\app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Jakob\Local Sites\hooliforum\app\public\wp-content\themes\hoolitheme\src\app.scss */"./src/app.scss");
+__webpack_require__(/*! /Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/src/app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! /Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/src/app.scss */"./src/app.scss");
 
 
 /***/ })
