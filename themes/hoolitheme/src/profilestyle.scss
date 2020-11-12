@@ -4,6 +4,7 @@
 
     .wpf-profile-plugin-menu{
         display: none;
+        background: none;
         background-color: $lightgrey;
     }
 
@@ -11,14 +12,35 @@
         display: none;
     }
 
-    .h-header .profile-stat-data-item{
-        @include h1;
-        color: red !important;
-    }
+    // .h-header .profile-stat-data-item{
+    //     @include h1;
+    // }
 
     .wpf-profile-info-wrap {
         display: flex;
         padding-top: 0 !important;
-        left: 0px !important;
+        left: 30px !important;
+    }
+
+    // #wpforo #wpforo-wrap .wpforo-profile-wrap .wpforo-profile-head-wrap {
+    //     display: flex !important;
+    //     flex-direction: column-reverse !important;
+    // }
+
+    #wpforo #wpforo-wrap .wpforo-profile-wrap .wpforo-profile-head{
+        background-image: none;
+        background-color: $lightgrey !important;
+    }
+
+    #wpforo #wpforo-wrap .wpforo-profile-wrap .h-header-info{
+        display: flex !important;
+    }
+
+    #wpforo #wpforo-wrap .wpforo-profile-wrap .h-top{
+        align-self: flex-end !important;
+    }
+
+    #wpforo #wpforo-wrap .wpforo-profile-wrap .wpf-profile-badge{
+        display: none !important;
     }
 }
