@@ -4,8 +4,6 @@
         while(have_posts()){
             the_post();
 
-            // echo the_title();
-            
             ?>  
                 <div class="main-container">
                     <main class="content">
