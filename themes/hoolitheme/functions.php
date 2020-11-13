@@ -2,7 +2,7 @@
 
 function hooliScripts(){
     //fonts
-    wp_enqueue_style( 'googleFonts', '//fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Varela+Round&display=swap', false);
 
     wp_register_style('style', get_template_directory_uri() . '/dist/app.css', [], 1, 'all' );
     wp_enqueue_style('style');
@@ -15,9 +15,25 @@ function hooliScripts(){
     // Add extra css on certain pages to remove unwanted breadcrumbs and title in wpForo    
     $url = home_url( add_query_arg( null, null ));
 
-    if(is_front_page() OR $url === site_url('community/') OR $url === site_url('community/senaste-inlaggen/') ){
-        wp_register_style('extraStyle', get_template_directory_uri() . '/dist/extraStyle.css', [], 1, 'all');
-        wp_enqueue_style('extraStyle');
+    if(is_front_page() OR $url === site_url('community/') ){
+        wp_register_style('notFrontPageOrCommunity', get_template_directory_uri() . '/dist/notFrontPageOrCommunity.css', [], 1, 'all');
+        wp_enqueue_style('notFrontPageOrCommunity');
+    }
+
+    // enqueue styles to hide forum statistics-box most pages, except front-page and profile-pages (profile, account, activity, subscription)
+    global $wpforo;
+    $wpForoUserObj = $wpforo->menu;
+    $profileObj = array_slice($wpForoUserObj, 7,4);
+    $profileUrls = array();
+    foreach($profileObj as $key){
+        array_push($profileUrls, $key['href']);
+    }
+
+    $currentUrl = home_url( add_query_arg( null, null ));
+
+    if(!is_front_page() AND !in_array($currentUrl, $profileUrls)){
+        wp_register_style('hideStatistics', get_template_directory_uri() . '/dist/hideStatistics.css', [], 1, 'all');
+        wp_enqueue_style('hideStatistics');
     }
 
 }
