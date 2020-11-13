@@ -87,6 +87,7 @@
   border-bottom: 2px solid black;
   transition: all 0.3s ease-out;
   width: 10rem;
+  color: black;
 }
 
 @media (min-width: 992px) {
@@ -95,20 +96,28 @@
   }
 }
 
+.Header__Form .Header__Input:hover,
 .Header__Form .Header__Input:focus {
   border-color: #ff9393;
 }
 
-.Header__SearchField:hover .Header__Form .Header__Icon {
+.Header__Form .Header__SearchButton {
+  background: none;
+  border: none;
+}
+
+.Header__Form .Header__SearchButton .Header__Icon {
+  color: black;
+}
+
+.Header__Form .Header__SearchButton .Header__Icon:hover,
+.Header__Form .Header__SearchButton .Header__Icon:focus {
   color: #ff9393;
 }
 
-.Header__SearchField:hover .Header__Form .Header__Input {
-  border-color: #ff9393;
-}
-
-.Header__Input:focus + .Header__SearchLabel .Header__Icon {
-  color: #ff9393;
+.Header__SearchButton {
+  background: none;
+  border: none;
 }
 
 .Header__LoggedInWrapper {
@@ -135,12 +144,83 @@
 }
 
 .Header__LoggedInWrapper .Header__IconLink:not(:last-child) {
-  margin-left: 2rem;
+  margin-left: 4rem;
   margin-right: 3rem;
 }
 
 .content p {
   color: red;
+}
+
+.wpforo-profile-wrap .wpf-profile-plugin-menu {
+  display: none;
+  background-color: #f6f6f6;
+}
+
+.wpforo-profile-wrap .wpfy {
+  display: none;
+}
+
+.wpforo-profile-wrap .h-header .profile-stat-data-item {
+  font-family: Varela Round;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2, 5rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.03em;
+  color: red !important;
+}
+
+.wpforo-profile-wrap .wpf-profile-info-wrap {
+  display: flex;
+  padding-top: 0 !important;
+  left: 0px !important;
+}
+
+.wpforo-forum-description,
+.wpfcl-1 {
+  color: #333333 !important;
+}
+
+.wpforo-forum-icon i {
+  color: #565656 !important;
+}
+
+.wpforo-forum-stat .wpfcl-1 {
+  color: #333333 !important;
+}
+
+.wpfl-2 .forum-wrap:not(:first-child) {
+  border-top: 1px solid #565656 !important;
+}
+
+#wpforo-stat-header,
+#wpforo #wpforo-wrap #wpforo-poweredby {
+  background-color: #777777 !important;
+}
+
+#wpforo #wpforo-wrap #wpforo-title {
+  color: white !important;
+}
+
+#wpforo #wpforo-wrap #wpforo-title.greyTitle {
+  color: #565656 !important;
+}
+
+.wpf-tags-title {
+  color: #565656 !important;
+}
+
+#wpf-msg-box {
+  display: none !important;
+}
+
+.wpf-subscribe-forum {
+  display: none !important;
+}
+
+.wpf-subscribe-topic {
+  display: none !important;
 }
 
 * {

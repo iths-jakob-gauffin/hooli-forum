@@ -1,2 +1,24 @@
+@import "./variables.scss";
+
 .wpforo-profile-wrap {
+
+    .wpf-profile-plugin-menu{
+        display: none;
+        background-color: $lightgrey;
+    }
+
+    .wpfy{
+        display: none;
+    }
+
+    .h-header .profile-stat-data-item{
+        @include h1;
+        color: red !important;
+    }
+
+    .wpf-profile-info-wrap {
+        display: flex;
+        padding-top: 0 !important;
+        left: 0px !important;
+    }
 }

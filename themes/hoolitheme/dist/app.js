@@ -90,25 +90,14 @@
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// const name = (stuff) => {
-//     return stuff + "!";
-// };
-// const test = name("Hej");
-// console.log(test);
-// alert("hej");
-// // Import components.
-// import Example from "./components/example.js";
-// // Initialize your components on DOM Ready.
-// $(document).ready(() => {
-//     console.log("saker händer");
-//     Example.init({
-//         setting: "New setting",
-//     });
-// });
-// alert("nsakldnkas");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _renameRecentPosts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./renameRecentPosts */ "./src/renameRecentPosts.js");
+
+var renameRecentPostsAndstyleTitleToBeGrey = new _renameRecentPosts__WEBPACK_IMPORTED_MODULE_0__["default"]();
 console.log("hej från javascriptet");
 
 /***/ }),
@@ -121,6 +110,62 @@ console.log("hej från javascriptet");
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./src/renameRecentPosts.js":
+/*!**********************************!*\
+  !*** ./src/renameRecentPosts.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var RenameRecentPosts = /*#__PURE__*/function () {
+  function RenameRecentPosts() {
+    _classCallCheck(this, RenameRecentPosts);
+
+    this.title = document.querySelector("#wpforo-title");
+    this.breadcrumbText = document.querySelector("#wpforo-wrap > div.wpforo-subtop > div.wpf-breadcrumb > div.wpf-item-element.active > span");
+    this.renameTitle();
+    this.renameBreadcrumb();
+    this.changeTitleColor();
+  }
+
+  _createClass(RenameRecentPosts, [{
+    key: "renameTitle",
+    value: function renameTitle() {
+      if (this.title && this.title.innerHTML.includes("Recent Posts")) {
+        this.title.innerHTML = "Senaste inläggen";
+        this.title.style.paddingBottom = "0";
+        this.title.style.marginBottom = "0";
+      }
+    }
+  }, {
+    key: "renameBreadcrumb",
+    value: function renameBreadcrumb() {
+      if (this.breadcrumbText && this.breadcrumbText.innerHTML.includes("Recent Posts")) {
+        this.breadcrumbText.innerHTML = "Senaste inläggen";
+      }
+    }
+  }, {
+    key: "changeTitleColor",
+    value: function changeTitleColor() {
+      this.title.classList.add("greyTitle");
+    }
+  }]);
+
+  return RenameRecentPosts;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (RenameRecentPosts);
 
 /***/ }),
 
