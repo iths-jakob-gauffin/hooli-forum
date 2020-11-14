@@ -5,6 +5,12 @@ $grey: #565656;
 $lightgrey: #f6f6f6;
 $white: #ffffff;
 $mf-pink: #ff9393;
+$grey-op: rgb(86, 86, 86, 0.5);
+
+//OPACITY-MIXINS
+@mixin bgColorOpacity($color, $opacity) {
+    background-color: rgba($color, $opacity);
+}
 
 // FONTS
 

@@ -1,0 +1,115 @@
+.Blog {
+    $root: &;
+    display: flex;
+
+    &__Main {
+        flex: 1 1 70%;
+        border: 1px solid blue;
+    }
+
+    &__Title {
+        @include h1;
+        font-size: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    &__Post {
+        margin-bottom: 6rem;
+        background-color: $lightgrey;
+        position: relative;
+
+        #{$root}__SinglePostLink {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+        }
+
+        #{$root}__BackgroundImageWrapper {
+            position: relative;
+            padding-top: calc(470 / 711 * 100%);
+            overflow: hidden;
+        }
+
+        #{$root}__BackgroundImage {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        &:hover #{$root}__BackgroundImage {
+            transform: scale(1.04);
+        }
+
+        #{$root}__Preamble {
+            position: absolute;
+            @include bgColorOpacity($mf-pink, 0.9);
+            height: 16rem;
+            bottom: 0;
+            left: 0;
+            padding: 1rem 2rem;
+        }
+
+        #{$root}__Label {
+            @include p;
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            ul {
+                list-style: none;
+                text-transform: uppercase;
+                display: flex;
+
+                li {
+                    &:not(:first-child) {
+                        margin-left: 1rem;
+                    }
+                    a {
+                        color: black;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        #{$root}__PostTitle {
+            margin-bottom: 1rem;
+            a {
+                @include h1;
+                text-decoration: none;
+                font-size: 3rem;
+                color: black;
+            }
+        }
+
+        #{$root}__Text {
+            @include p;
+            font-size: 2rem;
+            line-height: 1.4;
+
+            #{$root}__ReadMoreLink {
+                margin-left: 0.5rem;
+                text-decoration: none;
+                color: white;
+                position: relative;
+                z-index: 11;
+                cursor: pointer;
+
+                &:hover {
+                    border-bottom: 1px solid white;
+                }
+            }
+        }
+    }
+
+    &__Aside {
+        flex: 1 1 30%;
+        border: 1px solid red;
+    }
+}

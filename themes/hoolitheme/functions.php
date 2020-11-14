@@ -44,18 +44,26 @@ function hooliThemeFeatures(){
     register_nav_menu( 'customWpForoMenu', 'Custom Wp Foro Menu' );
     register_nav_menu( 'customWpForoMenuLoggedIn', 'Custom Wp Foro Menu LOGGED IN' );
 
+    add_theme_support( 'post-thumbnails');
+
+    //Resize all imported images
+    add_image_size( 'blogPresentation', 711, 470, true );
+    add_image_size( 'asideEvent', 250, 90, true );
+
 }
 
 add_action('after_setup_theme', 'hooliThemeFeatures');
 
-    //Redirecta subscribers som loggar in till hemsidan
+//Redirecta subscribers som loggar in till hemsidan
 
-    function redirectToFrontend(){
-        $ourMember = wp_get_current_user();
-    
-        if(count($ourMember->roles) == 1 AND $ourMember->roles[0] == 'subscriber'){
-            wp_redirect(site_url('/'));
-            exit;
-        }
+function redirectToFrontend(){
+    $ourMember = wp_get_current_user();
+
+    if(count($ourMember->roles) == 1 AND $ourMember->roles[0] == 'subscriber'){
+        wp_redirect(site_url('/'));
+        exit;
     }
-    add_action('admin_init', 'redirectToFrontend');
+}
+add_action('admin_init', 'redirectToFrontend');
+
+
