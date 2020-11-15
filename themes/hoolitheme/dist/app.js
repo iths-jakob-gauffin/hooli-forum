@@ -176,8 +176,8 @@ var RenameRecentPosts = /*#__PURE__*/function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Jakob\Local Sites\hooliforum\app\public\wp-content\themes\hoolitheme\src\app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Jakob\Local Sites\hooliforum\app\public\wp-content\themes\hoolitheme\src\app.scss */"./src/app.scss");
+__webpack_require__(/*! C:\Users\jakob\Local Sites\hooliforumexport\app\public\wp-content\themes\hoolitheme\src\app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! C:\Users\jakob\Local Sites\hooliforumexport\app\public\wp-content\themes\hoolitheme\src\app.scss */"./src/app.scss");
 
 
 /***/ })

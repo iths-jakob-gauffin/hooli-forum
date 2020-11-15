@@ -26,6 +26,7 @@
                             ?><a href="<?php the_permalink(); ?>" class="Blog__ReadMoreLink">Läs mer</a></div>   
                         </section>
                 </div>
+                
             </article>
             
             <?php
@@ -39,25 +40,54 @@
                     
                     <ul class="Blog__AsideEventList">
                     <?php 
+                        $today = date('Ymd');
+                        
                         $eventPosts = new WP_Query(array(
-                            'posts_per_page' => 1,
-                            'post_type' => 'event'
+                            'posts_per_page' => 4,
+                            'post_type' => 'event',
+                            'meta_key' => 'event_date',
+                            'orderby' => 'meta_value_num',
+                            'order' => 'ASC',
+                            'meta_query' => array(
+                                array(
+                                    'key' => 'event_date',
+                                    'compare' => '>=',
+                                    'value' => date('Ymd'),
+                                    'type' => 'numeric'
+                                )
+                            )
                         ));
+
                         while($eventPosts->have_posts()){
-                            $eventPosts->the_post(); ?>
-                            <li class="Blog__AsideEventItem" style="background: url('<?php the_post_thumbnail_url('asideEvent'); ?>')">
-                                <a href="<?php the_permalink(); ?>" class="Blog__AsideEventLink"></a>
-                                <div class="Blog__DateContainer">
-                                    <span class="Blog__Date">24</span>
-                                    <span class="Blog__Month">
-                                        Nov
-                                    </span>
-                                </div>
-                                <p class="Blog__EventName">Action Bronson</p>
-                            </li>
+                            $eventPosts->the_post(); 
+                            
+                            $date = new DateTime(get_field('event_date'));
+                            //Få ut klockslag
+                            // $time = new DateTime(get_field('event_time'));
+                            // echo $time->format('H:i');
+                            
+
+                            ?>
+                            <!-- <div class="Blog__ListItemWrapper"> -->
+                                <li class="Blog__AsideEventItem" style="background: url('<?php the_post_thumbnail_url('asideEvent'); ?>')">
+                                    <a href="<?php the_permalink(); ?>" class="Blog__AsideEventLink"></a>
+                                    <div class="Blog__DateContainer">
+                                        <span class="Blog__Date">
+                                        <?php echo $date->format('d'); ?>
+                                        </span>
+                                        <span class="Blog__Month">
+                                            <?php echo $date->format('M'); ?>
+                                        </span>
+                                    </div>
+                                    <div class="Blog__EventNameWrapper">
+                                        <p class="Blog__EventName"><?php the_title();?></p>
+                                    </div>
+                                </li>
+                            <!-- </div> -->
 
                         <?php
                         }
+                        wp_reset_postdata();
                         
                     ?>
                     </ul>
