@@ -4,6 +4,9 @@ function hooliScripts(){
     //fonts
     wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Varela+Round&display=swap', false);
 
+    //font-awesome
+    wp_enqueue_style('fontawesome5', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css', array(), null );
+
     wp_register_style('style', get_template_directory_uri() . '/dist/app.css', [], 1, 'all' );
     wp_enqueue_style('style');
 
