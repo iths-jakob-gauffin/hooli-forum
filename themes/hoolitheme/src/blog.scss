@@ -4,13 +4,82 @@
 
     &__Main {
         flex: 1 1 70%;
-        border: 1px solid blue;
+        padding-right: 2rem;
+    }
+
+    &__Nav{
+        background-color: $mf-pink;
+        padding: 0 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 98rem;
+        height: 8rem;
+        margin-bottom: 2rem;
+
+    }
+
+    &__NavList{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        height: 100%;
+    }
+
+    &__NavItem{
+        @include navText;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 0 .5rem;
+        // transition: background .1s ease-in;
+
+        &:not(:last-child){
+            margin-right: 2rem;
+        }
+
+        &:hover{
+            background-color: $black;
+        }
+    }
+
+    &__NavLink{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    &__NavLinkText{
+        text-decoration: none;
+        color: $darkgrey;
+        text-transform: uppercase;
+        display: block;
+
+        .Blog__NavItem:hover &{
+            &--Pink{
+                color: $mf-pink;
+            }
+            &--Green{
+                color: $mf-green;
+            }
+            &--Yellow{
+                color: $mf-yellow;
+            }
+            &--Blue{
+                color: $mf-blue;
+            }
+        }
     }
 
     &__Title {
         @include h1;
-        font-size: 4rem;
-        margin-bottom: 4rem;
+        font-size: 3rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $darkgrey;
     }
 
     &__Post {
@@ -112,6 +181,6 @@
 
     &__Aside {
         flex: 1 1 30%;
-        border: 1px solid red;
+        // border: 1px solid red;
     }
 }

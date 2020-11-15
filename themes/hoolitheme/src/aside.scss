@@ -7,6 +7,37 @@
         overflow: hidden;
     }
 
+    &__AsideEvents{
+        margin-bottom: 4rem;
+    }
+
+    &__AsideTitleWrapper{
+        background-color: $darkgrey;
+        padding: 1.2rem;
+        height: 6rem;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: .9rem;
+    }
+
+    &__AsideTitle{
+        @include h1;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        
+        &--Green{
+            color: $mf-green;
+        }
+
+        &--Yellow{
+            color: $mf-yellow;
+        }
+
+        &--Blue{
+            color: $mf-blue;
+        }
+    }
+
     &__AsideEventList {
         list-style: none;
         display: flex;
@@ -60,7 +91,7 @@
                     height: 15rem;
                     background: linear-gradient(
                         to top,
-                        rgb(136, 221, 174) 5%,
+                        $mf-green 5%,
                         transparent
                     );
                     position: absolute;

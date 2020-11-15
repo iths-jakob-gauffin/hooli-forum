@@ -6,7 +6,7 @@
   line-height: 2.4rem;
   letter-spacing: -0.03em;
   padding-top: 8rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -229,7 +229,78 @@
 
 .Blog__Main {
   flex: 1 1 70%;
-  border: 1px solid blue;
+  padding-right: 2rem;
+}
+
+.Blog__Nav {
+  background-color: #ff9393;
+  padding: 0 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 98rem;
+  height: 8rem;
+  margin-bottom: 2rem;
+}
+
+.Blog__NavList {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+}
+
+.Blog__NavItem {
+  font-family: Varela Round;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.03em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 0.5rem;
+}
+
+.Blog__NavItem:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.Blog__NavItem:hover {
+  background-color: #000000;
+}
+
+.Blog__NavLink {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.Blog__NavLinkText {
+  text-decoration: none;
+  color: #333333;
+  text-transform: uppercase;
+  display: block;
+}
+
+.Blog__NavItem:hover .Blog__NavLinkText--Pink {
+  color: #ff9393;
+}
+
+.Blog__NavItem:hover .Blog__NavLinkText--Green {
+  color: #88ddae;
+}
+
+.Blog__NavItem:hover .Blog__NavLinkText--Yellow {
+  color: #fff570;
+}
+
+.Blog__NavItem:hover .Blog__NavLinkText--Blue {
+  color: #7cc9fb;
 }
 
 .Blog__Title {
@@ -239,8 +310,10 @@
   font-size: 2, 5rem;
   line-height: 2.4rem;
   letter-spacing: -0.03em;
-  font-size: 4rem;
-  margin-bottom: 4rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #333333;
 }
 
 .Blog__Post {
@@ -358,12 +431,47 @@
 
 .Blog__Aside {
   flex: 1 1 30%;
-  border: 1px solid red;
 }
 
 .Blog__Aside {
   background-color: #f6f6f6;
   overflow: hidden;
+}
+
+.Blog__AsideEvents {
+  margin-bottom: 4rem;
+}
+
+.Blog__AsideTitleWrapper {
+  background-color: #333333;
+  padding: 1.2rem;
+  height: 6rem;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 0.9rem;
+}
+
+.Blog__AsideTitle {
+  font-family: Varela Round;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2, 5rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.03em;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.Blog__AsideTitle--Green {
+  color: #88ddae;
+}
+
+.Blog__AsideTitle--Yellow {
+  color: #fff570;
+}
+
+.Blog__AsideTitle--Blue {
+  color: #7cc9fb;
 }
 
 .Blog__AsideEventList {
