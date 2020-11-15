@@ -52,6 +52,7 @@ function hooliThemeFeatures(){
     //Resize all imported images
     add_image_size( 'blogPresentation', 711, 470, true );
     add_image_size( 'asideEvent', 250, 90, true );
+    add_image_size( 'asideReview', 100, 100, true );
 
 }
 

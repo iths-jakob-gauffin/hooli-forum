@@ -24,7 +24,48 @@
                     </ul>
                 </nav>
     <?php 
+
+    /// mergea sökning
+    $defaults = [
+        'fields'                 => 'ids',
+        'update_post_term_cache' => false,
+        'update_post_meta_cache' => false,
+        'cache_results'          => false
+    ];
+
+    $event_args = [
+        'posts_per_page' => 1,
+        'post_type' => 'event'
+    ];
+
+    $post_args = [
+        'posts_per_page' => 2,
+        'post_type' => 'post',
+        'category_name' => 'intervju'
+    ];
+
+    $event_query = get_posts(array_merge($defaults, $event_args));
+    $post_query = get_posts(array_merge($defaults, $post_args));
     
+    $post_ids = array_merge($event_query, $post_query);
+    
+    $final_args = [
+        'post_type' => ['post', 'event'],
+        'post__in' => $post_ids,
+        'orderby' => 'post__in',
+        'order' => 'ASC'
+    ];
+
+    //denna ihopslagna sökning kan man nu loopa
+    // $mergedSearch = new WP_Query($final_args);
+
+    
+    $categoryColors = array(
+        'nyheter' => 'Blue',
+        'recension' => 'Yellow',
+        'intervju' => 'Pink'
+    );
+        
     while(have_posts()){
         the_post();
         ?>
@@ -37,12 +78,20 @@
                     the_post_thumbnail_url( 'backgroundPresentation' );
                     ?>)">
                     </div>      
-                        <section class="Blog__Preamble">
+                        <section class="<?php   
+                            if(has_category()){
+                                $cssModifier = get_the_category()[0]->category_nicename;
+                                
+                            echo 'Blog__Preamble Blog__Preamble--' .             $categoryColors[$cssModifier];            
+                            }else{
+                                echo 'Blog__Preamble';
+                            };
+                        ?>">
                             <div class="Blog__Label"><?php the_category(); ?></div>
                             <h2 class="Blog__PostTitle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2> 
                             <div class="Blog__Text">
                             <?php $content = get_the_content(); 
-                            echo wp_trim_words( $content, 13); 
+                            echo wp_trim_words( $content, 20); 
                             ?><a href="<?php the_permalink(); ?>" class="Blog__ReadMoreLink">Läs mer</a></div>   
                         </section>
                 </div>
@@ -121,8 +170,11 @@
                     
                     <ul class="Blog__AsideEventList">
                     <?php 
-                        $today = date('Ymd');
-                        
+                        $reviewPosts = new WP_Query(array(
+                            'posts_per_page' => 2,
+                            'category_name' => 'recension'
+                        ));
+
                         $eventPosts = new WP_Query(array(
                             'posts_per_page' => 4,
                             'post_type' => 'event',
@@ -139,32 +191,16 @@
                             )
                         ));
 
-                        while($eventPosts->have_posts()){
-                            $eventPosts->the_post(); 
-                            
-                            $date = new DateTime(get_field('event_date'));
-                            //Få ut klockslag
-                            // $time = new DateTime(get_field('event_time'));
-                            // echo $time->format('H:i');
-                            
-
+                        while($reviewPosts->have_posts()){
+                            $reviewPosts->the_post(); 
                             ?>
-                            <!-- <div class="Blog__ListItemWrapper"> -->
-                                <li class="Blog__AsideEventItem" style="background: url('<?php the_post_thumbnail_url('asideEvent'); ?>')">
-                                    <a href="<?php the_permalink(); ?>" class="Blog__AsideEventLink"></a>
-                                    <div class="Blog__DateContainer">
-                                        <span class="Blog__Date">
-                                        <?php echo $date->format('d'); ?>
-                                        </span>
-                                        <span class="Blog__Month">
-                                            <?php echo $date->format('M'); ?>
-                                        </span>
-                                    </div>
-                                    <div class="Blog__EventNameWrapper">
-                                        <p class="Blog__EventName"><?php the_title();?></p>
+                                <li class="Aside__ReviewItem">
+                                    <a href="<?php the_permalink(); ?>" class="Aside__ReviewLink"></a>
+                                    <img src="<?php the_post_thumbnail_url( 'asideReview' ); ?>" alt="BYT UT" class="Aside__ReviewImage">
+                                    <div class="Aside__EventNameWrapper">
+                                        <p class="Aside__EventName"><?php the_title();?></p>
                                     </div>
                                 </li>
-                            <!-- </div> -->
 
                         <?php
                         }
@@ -209,7 +245,7 @@
 
                             ?>
                             <!-- <div class="Blog__ListItemWrapper"> -->
-                                <li class="Blog__AsideEventItem" style="background: url('<?php the_post_thumbnail_url('asideEvent'); ?>')">
+                                <li class="Blog__AsideEventItem" style="background: url('<?php the_post_thumbnail_url( 'asideEvent' ); ?>')">
                                     <a href="<?php the_permalink(); ?>" class="Blog__AsideEventLink"></a>
                                     <div class="Blog__DateContainer">
                                         <span class="Blog__Date">
