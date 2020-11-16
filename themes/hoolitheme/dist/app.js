@@ -93,23 +93,22 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// const name = (stuff) => {
-//     return stuff + "!";
-// };
-// const test = name("Hej");
-// console.log(test);
-// alert("hej");
-// // Import components.
-// import Example from "./components/example.js";
-// // Initialize your components on DOM Ready.
-// $(document).ready(() => {
-//     console.log("saker händer");
-//     Example.init({
-//         setting: "New setting",
-//     });
-// });
-// alert("nsakldnkas");
 console.log("hej från javascriptet");
+
+function changeColors() {
+  var activeText = document.querySelector('.wpforo-active');
+  activeText.classList.add('.remove:hover');
+  var ratings = document.querySelectorAll('.rating-bar-cell');
+  ratings.forEach(function (element) {
+    if (!element.classList.contains("wpfbg-7")) {
+      element.style.backgroundColor = "#7CC985";
+    } else {
+      element.style.backgroundColor = "#7CC985";
+    }
+  });
+}
+
+changeColors();
 
 /***/ }),
 
