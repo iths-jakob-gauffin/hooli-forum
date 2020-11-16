@@ -65,7 +65,7 @@
         'recension' => 'Yellow',
         'intervju' => 'Pink'
     );
-        
+
     while(have_posts()){
         the_post();
         echo var_dump(get_the_category()[0]->category_parent);
@@ -126,7 +126,7 @@
                                 array(
                                     'key' => 'event_date',
                                     'compare' => '>=',
-                                    'value' => date('Ymd'),
+                                    'value' => $today,
                                     'type' => 'numeric'
                                 )
                             )
