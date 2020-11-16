@@ -318,6 +318,13 @@
   border-bottom: none !important;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-family: "varela round";
+  padding: 5rem 0;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
