@@ -318,6 +318,17 @@
   border-bottom: none !important;
 }
 
+.wpforo-register-wrap .wpforo-register-content .wpf-field-wrap input,
+.wpforo-register-wrap .wpforo-register-content .wpf-label-wrap input {
+  padding: 10px 20px 10px 34px !important;
+}
+
+.wpforo-register-wrap .wpforo-register-content .wpf-field-wrap i,
+.wpforo-register-wrap .wpforo-register-content .wpf-label-wrap i {
+  left: 15px !important;
+  top: 17px !important;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;

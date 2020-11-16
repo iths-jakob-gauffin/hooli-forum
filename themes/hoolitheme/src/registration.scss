@@ -36,5 +36,18 @@
             align-items: center;
             border-bottom: none !important;
         }
+
+        .wpf-field-wrap input,
+        .wpf-label-wrap input {
+            padding: 10px 20px 10px 34px !important;
+        }
+
+
+        .wpf-field-wrap i,
+        .wpf-label-wrap i {
+            left: 15px !important;
+            top: 17px !important;
+        }
+
     }
 }
