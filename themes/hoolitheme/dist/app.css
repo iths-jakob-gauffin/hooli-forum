@@ -296,7 +296,7 @@
 }
 
 .Blog__NavItem:hover .Blog__NavLinkText--Yellow {
-  color: #fff570;
+  color: #fff238;
 }
 
 .Blog__NavItem:hover .Blog__NavLinkText--Blue {
@@ -371,7 +371,7 @@
 }
 
 .Blog__Post .Blog__Preamble--Yellow {
-  background-color: rgba(255, 245, 112, 0.9);
+  background-color: rgba(255, 242, 56, 0.9);
 }
 
 .Blog__Post .Blog__Preamble--Green {
@@ -483,7 +483,7 @@
 }
 
 .Blog__AsideTitle--Yellow {
-  color: #fff570;
+  color: #fff238;
 }
 
 .Blog__AsideTitle--Blue {
@@ -604,19 +604,104 @@
 .Aside__ReviewItem {
   width: 90%;
   height: 15rem;
-  background-color: #fff570;
-  background-color: #565656;
-  border: 1px solid red;
+  background-color: #fff238;
   margin-bottom: 0.9rem;
   padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.Aside__ReviewItem::after {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  left: -11rem;
+  height: 100%;
+  width: 50%;
+  background-color: #333333;
+  z-index: 1;
+  transform: rotate(90deg) translate(0, 3rem);
+  transition: all 0.2s ease-in-out;
+}
+
+.Aside__ReviewItem:hover::after {
+  top: -2rem;
+  left: -11rem;
+  height: 100%;
+  width: 50%;
+  background-color: #333333;
+  z-index: 1;
+  transform: rotate(113deg) translate(0, -0.3rem);
+}
+
+.Aside__ReviewLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+}
+
+.Aside__Wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
 }
 
 .Aside__ReviewImage {
+  display: block;
   border-radius: 50%;
   width: 10rem;
   height: 10rem;
   -o-object-fit: cover;
      object-fit: cover;
+  border: 3px solid #fff238;
+  box-shadow: 2px 0px 4px rgba(51, 51, 51, 0.9);
+  position: relative;
+  transform: translate(-0.5rem, 0);
+  transition: all 1s ease-in-out;
+}
+
+.Aside__ReviewItem:hover .Aside__ReviewImage {
+  box-shadow: 4px 4px 8px rgba(51, 51, 51, 0.7);
+  transform: translate(-0.5rem, -0.5rem);
+}
+
+.Aside__ReviewTextWrapper {
+  width: 100%;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.Aside__ReviewAuthor {
+  font-family: Varela Round;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2, 5rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  align-self: flex-end;
+  margin-bottom: 0.9rem;
+  color: #000000;
+  letter-spacing: 1px;
+}
+
+.Aside__EventExcerpt {
+  font-family: Varela Round;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2, 5rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.03em;
+  font-size: 1.5rem;
+  color: #000000;
+  font-weight: 700;
 }
 
 * {

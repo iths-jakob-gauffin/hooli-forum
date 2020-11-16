@@ -4,17 +4,95 @@
     width: 90%;
     height: 15rem;
     background-color: $mf-yellow;
-    background-color: $grey;
-    border: 1px solid red;
     margin-bottom: .9rem;
     padding: 1rem;
+    position: relative;
+    overflow: hidden;
+
+    &::after{
+      content: "";
+      position: absolute;
+      top: 2rem;
+      left: -11rem;
+      height: 100%;
+      width: 50%;
+      background-color: $darkgrey;
+      z-index: 1;
+      transform: rotate(90deg) translate(0, 3rem);
+      transition: all .2s ease-in-out;
+    }
+
+    &:hover {
+
+      &::after{
+        top: -2rem;
+        left: -11rem;
+        height: 100%;
+        width: 50%;
+        background-color: $darkgrey;
+        z-index: 1;
+        transform: rotate(113deg) translate(0, -.3rem);;
+      }
+    }
+  }
+
+  &__ReviewLink{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+  }
+
+  &__Wrapper{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__ReviewImage{
+    display: block;
     border-radius: 50%;
     width: 10rem;
     height: 10rem;
     object-fit: cover;
+    border: 3px solid $mf-yellow;
+    box-shadow: 2px 0px 4px rgba($darkgrey, .9);
+    position: relative;
+    transform: translate(-.5rem, 0);
+    transition: all 1s ease-in-out;;
+    
+    .Aside__ReviewItem:hover &{
+      box-shadow: 4px 4px 8px rgba($darkgrey, .7);
+      transform: translate(-.5rem, -.5rem);
+    }
+  }
 
+  &__ReviewTextWrapper{
+    width: 100%;
+    // border: 1px solid red;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__ReviewAuthor{
+    @include h1;
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+    align-self: flex-end;
+    margin-bottom: .9rem;
+    color: $black;
+    letter-spacing: 1px;
+  }
+
+  &__EventExcerpt{
+    @include h1;
+    font-size: 1.5rem;
+    color: $black;
+    font-weight: 700;
   }
 }

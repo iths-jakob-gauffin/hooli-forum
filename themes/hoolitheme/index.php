@@ -68,6 +68,7 @@
         
     while(have_posts()){
         the_post();
+        echo var_dump(get_the_category()[0]->category_parent);
         ?>
             <article class="Blog__Post">
                 <a href="<?php the_permalink(); ?>" class="Blog__SinglePostLink"></a>
@@ -76,10 +77,12 @@
 
                     <div class="Blog__BackgroundImage" style="background-image: url(<?php 
                     the_post_thumbnail_url( 'backgroundPresentation' );
+                    
                     ?>)">
                     </div>      
                         <section class="<?php   
-                            if(has_category()){
+                            if(has_category() AND !get_the_category()[0]->category_parent){
+                                
                                 $cssModifier = get_the_category()[0]->category_nicename;
                                 
                             echo 'Blog__Preamble Blog__Preamble--' .             $categoryColors[$cssModifier];            
@@ -196,9 +199,12 @@
                             ?>
                                 <li class="Aside__ReviewItem">
                                     <a href="<?php the_permalink(); ?>" class="Aside__ReviewLink"></a>
-                                    <img src="<?php the_post_thumbnail_url( 'asideReview' ); ?>" alt="BYT UT" class="Aside__ReviewImage">
-                                    <div class="Aside__EventNameWrapper">
-                                        <p class="Aside__EventName"><?php the_title();?></p>
+                                    <div class="Aside__Wrapper">
+                                        <img src="<?php the_post_thumbnail_url( 'asideReview' ); ?>" alt="BYT UT" class="Aside__ReviewImage">
+                                        <div class="Aside__ReviewTextWrapper">
+                                            <h1 class="Aside__ReviewAuthor"><?php echo get_field('review_author'); ?></h1>
+                                            <span class="Aside__EventExcerpt"><?php echo wp_trim_words(get_the_excerpt(), 13, '..."');?></span>
+                                        </div>
                                     </div>
                                 </li>
 
