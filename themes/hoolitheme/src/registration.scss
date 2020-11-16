@@ -1,0 +1,40 @@
+@import "./variables.scss";
+
+.wpforo-register-wrap {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .top-border {
+        width: 100%;
+        background-color: $mf-pink;
+        padding: 7px 12px !important;
+
+        p {
+            color: white !important;
+            font-size: 14px !important;
+            padding: 5px 0 !important;
+        }
+    }
+
+    .wpforo-register-content {
+        border-top: none !important;
+
+        h3 {
+            display: none;
+        }
+
+        .wpf-field-wrap,
+        .wpf-label-wrap {
+            width: 65% !important;
+        }
+
+        .wpf-field {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: none !important;
+        }
+    }
+}

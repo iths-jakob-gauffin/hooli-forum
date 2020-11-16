@@ -26,6 +26,11 @@ function hooliScripts(){
         wp_enqueue_script('editInnerText');
     }
 
+    if ($url === site_url('community/?foro=signup')) {
+        wp_register_script('addTopBorder', get_template_directory_uri() . '/src/addTopBorder.js', ['jquery'], 1, true);
+
+    }
+
     if ($url === site_url('/wp-login.php')) {
         wp_register_script('addTopBorder', get_template_directory_uri() . '/src/addTopBorder.js', ['jquery'], 1, true);
         wp_register_script('addPlaceholder', get_template_directory_uri() . '/src/addPlaceholder.js', ['jquery'], 1, true);

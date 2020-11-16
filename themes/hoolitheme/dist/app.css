@@ -280,6 +280,44 @@
   background-color: white;
 }
 
+.wpforo-register-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wpforo-register-wrap .top-border {
+  width: 100%;
+  background-color: #ff9393;
+  padding: 7px 12px !important;
+}
+
+.wpforo-register-wrap .top-border p {
+  color: white !important;
+  font-size: 14px !important;
+  padding: 5px 0 !important;
+}
+
+.wpforo-register-wrap .wpforo-register-content {
+  border-top: none !important;
+}
+
+.wpforo-register-wrap .wpforo-register-content h3 {
+  display: none;
+}
+
+.wpforo-register-wrap .wpforo-register-content .wpf-field-wrap,
+.wpforo-register-wrap .wpforo-register-content .wpf-label-wrap {
+  width: 65% !important;
+}
+
+.wpforo-register-wrap .wpforo-register-content .wpf-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: none !important;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

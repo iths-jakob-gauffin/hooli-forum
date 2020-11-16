@@ -1,5 +1,5 @@
 
-const addTopBorder = (elementToPick) => {
+const addTopBorder = (elementToPick, text) => {
 
     console.log("topborder");
 
@@ -8,16 +8,20 @@ const addTopBorder = (elementToPick) => {
     div.classList.add("top-border");
 
     const p = document.createElement("p");
-    p.innerText = "Logga in";
+    p.innerText = text;
     div.append(p);
 
 }
 
 
 if(window.location.pathname === '/wp-login.php'){
-    addTopBorder("#loginform");
+    addTopBorder("#loginform", "Logga in");
 }
 
 if (window.location.search === '?foro=signin') {
-    addTopBorder(".wpforo-login-wrap");
+    addTopBorder(".wpforo-login-wrap", "Logga in");
+}
+
+if (window.location.search === '?foro=signup') {
+    addTopBorder(".wpforo-register-wrap", "Registrera konto");
 }
