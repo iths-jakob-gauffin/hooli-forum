@@ -16,8 +16,8 @@ const addTopBorder = (elementToPick) => {
 
 if(window.location.pathname === '/wp-login.php'){
     addTopBorder("#loginform");
-} else {
-    addTopBorder(".wpforo-login-wrap");
 }
 
-
+if (window.location.search === '?foro=signin') {
+    addTopBorder(".wpforo-login-wrap");
+}

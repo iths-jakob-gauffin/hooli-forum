@@ -119,7 +119,9 @@ var addTopBorder = function addTopBorder(elementToPick) {
 
 if (window.location.pathname === '/wp-login.php') {
   addTopBorder("#loginform");
-} else {
+}
+
+if (window.location.search === '?foro=signin') {
   addTopBorder(".wpforo-login-wrap");
 }
 

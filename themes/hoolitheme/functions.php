@@ -29,7 +29,6 @@ function hooliScripts(){
     if ($url === site_url('/wp-login.php')) {
         wp_register_script('addTopBorder', get_template_directory_uri() . '/src/addTopBorder.js', ['jquery'], 1, true);
         wp_register_script('addPlaceholder', get_template_directory_uri() . '/src/addPlaceholder.js', ['jquery'], 1, true);
-        // wp_enqueue_script('addPlaceholder');
     }
 
 }
