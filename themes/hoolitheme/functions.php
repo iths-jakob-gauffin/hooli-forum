@@ -22,18 +22,21 @@ function hooliScripts(){
     if ($url === site_url('community/?foro=signin')) {
         wp_register_script('addTopBorder', get_template_directory_uri() . '/src/addTopBorder.js', ['jquery'], 1, true);
         wp_register_script('editInnerText', get_template_directory_uri() . '/src/editInnerText.js', ['jquery'], 1, true);
-
+        wp_enqueue_script('addTopBorder');
         wp_enqueue_script('editInnerText');
     }
 
     if ($url === site_url('community/?foro=signup')) {
         wp_register_script('addTopBorder', get_template_directory_uri() . '/src/addTopBorder.js', ['jquery'], 1, true);
+        wp_enqueue_script('addTopBorder');
 
     }
 
-    if ($url === site_url('/wp-login.php')) {
+    if ($url === site_url('/wp-login.php') || $url === site_url('/wp-login.php?loggedout=true&wp_lang=en_US')) {
         wp_register_script('addTopBorder', get_template_directory_uri() . '/src/addTopBorder.js', ['jquery'], 1, true);
         wp_register_script('addPlaceholder', get_template_directory_uri() . '/src/addPlaceholder.js', ['jquery'], 1, true);
+        wp_enqueue_script('addTopBorder');
+
     }
 
 }

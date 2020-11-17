@@ -1,8 +1,6 @@
 
 const addTopBorder = (elementToPick, text) => {
 
-    console.log("topborder");
-
     const form = document.querySelector(elementToPick);
     const div = form.insertBefore(document.createElement("div"), form.firstChild);
     div.classList.add("top-border");

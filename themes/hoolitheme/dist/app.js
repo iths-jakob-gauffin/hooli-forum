@@ -86,66 +86,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/addPlaceholder.js":
-/*!*******************************!*\
-  !*** ./src/addPlaceholder.js ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var addPlaceholder = function addPlaceholder() {
-  document.querySelector("#user_login").placeholder = "Användarnamn";
-  document.querySelector("#user_pass").placeholder = "Lösenord";
-}; // addPlaceholder();
-
-/***/ }),
-
-/***/ "./src/addTopBorder.js":
-/*!*****************************!*\
-  !*** ./src/addTopBorder.js ***!
-  \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var addTopBorder = function addTopBorder(elementToPick, text) {
-  console.log("topborder");
-  var form = document.querySelector(elementToPick);
-  var div = form.insertBefore(document.createElement("div"), form.firstChild);
-  div.classList.add("top-border");
-  var p = document.createElement("p");
-  p.innerText = text;
-  div.append(p);
-};
-
-if (window.location.pathname === '/wp-login.php') {
-  addTopBorder("#loginform", "Logga in");
-}
-
-if (window.location.search === '?foro=signin') {
-  addTopBorder(".wpforo-login-wrap", "Logga in");
-}
-
-if (window.location.search === '?foro=signup') {
-  addTopBorder(".wpforo-register-wrap", "Registrera konto");
-}
-
-/***/ }),
-
 /***/ "./src/app.js":
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _addPlaceholder_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addPlaceholder.js */ "./src/addPlaceholder.js");
-/* harmony import */ var _addPlaceholder_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_addPlaceholder_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _addTopBorder_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./addTopBorder.js */ "./src/addTopBorder.js");
-/* harmony import */ var _addTopBorder_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_addTopBorder_js__WEBPACK_IMPORTED_MODULE_1__);
-
- // const name = (stuff) => {
+// const name = (stuff) => {
 //     return stuff + "!";
 // };
 // const test = name("Hej");
@@ -161,12 +109,6 @@ __webpack_require__.r(__webpack_exports__);
 //     });
 // });
 // alert("nsakldnkas");
-//Add placeholders to input fields in login page
-// addPlaceholder();
-// addTopBorder("#loginform");
-//app.js körs på varje sida nu. Hittar inte alla element då de kanske tillhör en annan sida. 
-// addTopBorder(".wpforo-login-content");
-
 console.log("hej från javascriptet");
 
 /***/ }),
