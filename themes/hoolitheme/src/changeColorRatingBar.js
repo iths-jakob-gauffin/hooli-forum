@@ -1,4 +1,4 @@
-function changeColors(){
+function changeColorRatingBar(){
   let activeText = document.querySelector('.wpforo-active')
   activeText.classList.add('.remove:hover')
 
@@ -11,4 +11,5 @@ function changeColors(){
     }
   });
 }
-changeColors()
+
+export default changeColorRatingBar
