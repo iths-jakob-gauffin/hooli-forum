@@ -120,6 +120,11 @@
   border: none;
 }
 
+.Header .Header__Icon {
+  font-size: 2rem;
+  margin-left: 0.5rem;
+}
+
 .Header__LoggedInWrapper {
   display: flex;
   align-items: center;
@@ -127,10 +132,6 @@
 
 .Header__LoggedInWrapper .Header__SearchLabel {
   margin-right: 3rem;
-}
-
-.Header__LoggedInWrapper .Header__Icon {
-  font-size: 2rem;
 }
 
 .Header__LoggedInWrapper .Header__IconLink {
