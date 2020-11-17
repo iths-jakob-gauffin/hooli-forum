@@ -1,14 +1,10 @@
 @import "./variables.scss";
 
 .Header {
-    font-family: Varela Round;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 2rem;
-    line-height: 2.4rem;
-    letter-spacing: -0.03em;
+    @include navText;
+
     padding-top: 8rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,7 +45,7 @@
                 padding: 0.5rem;
                 text-transform: uppercase;
                 text-decoration: none;
-                transition: color 0.3s ease-out;
+                transition: color 0.2s ease-out;
                 display: inline-block;
 
                 &:hover,
@@ -65,47 +61,52 @@
 
         .Header__Icon {
             color: black;
-            font-size: 3.2rem;
+            font-size: 3rem;
             cursor: pointer;
-            transition: all 0.3s ease-out;
+            transition: all 0.2s ease-out;
         }
 
         .Header__Input {
             font-family: Varela Round;
             font-style: normal;
             font-weight: normal;
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             line-height: 2.4rem;
             letter-spacing: -0.03em;
             border: none;
             border-bottom: 2px solid black;
-            transition: all 0.3s ease-out;
+            transition: all 0.2s ease-out;
             width: 10rem;
+            color: black;
 
             @include lg {
-                width: 15.9rem;
+                width: 11rem;
             }
 
+            &:hover,
             &:focus {
                 border-color: $mf-pink;
             }
         }
-    }
 
-    &__SearchField:hover {
-        .Header__Form {
+        .Header__SearchButton {
+            background: none;
+            border: none;
+
             .Header__Icon {
-                color: $mf-pink;
-            }
+                color: black;
 
-            .Header__Input {
-                border-color: $mf-pink;
+                &:hover,
+                &:focus {
+                    color: $mf-pink;
+                }
             }
         }
     }
 
-    &__Input:focus + &__SearchLabel &__Icon {
-        color: $mf-pink;
+    &__SearchButton {
+        background: none;
+        border: none;
     }
 
     &__LoggedInWrapper {
@@ -117,12 +118,12 @@
         }
 
         .Header__Icon {
-            font-size: 3.2rem;
+            font-size: 2rem;
         }
 
         .Header__IconLink {
             color: black;
-            transition: color 0.3s ease-out;
+            transition: color 0.2s ease-out;
 
             &:hover,
             &:focus {
@@ -131,7 +132,7 @@
         }
 
         .Header__IconLink:not(:last-child) {
-            margin-left: 2rem;
+            margin-left: 4rem;
             margin-right: 3rem;
         }
     }

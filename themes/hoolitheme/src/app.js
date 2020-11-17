@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { addPlaceholder } from "./addPlaceholder.js";
 import { addTopBorder} from "./addTopBorder.js";
 
@@ -5,25 +6,11 @@ import { addTopBorder} from "./addTopBorder.js";
 // const name = (stuff) => {
 //     return stuff + "!";
 // };
+=======
+import RenameRecentPosts from "./renameRecentPosts";
+>>>>>>> c330f94c66cd0610ada7352a3a1ffdd8b35a4efd
 
-// const test = name("Hej");
-
-// console.log(test);
-
-// alert("hej");
-
-// // Import components.
-// import Example from "./components/example.js";
-
-// // Initialize your components on DOM Ready.
-// $(document).ready(() => {
-//     console.log("saker händer");
-//     Example.init({
-//         setting: "New setting",
-//     });
-// });
-
-// alert("nsakldnkas");
+const renameRecentPostsAndstyleTitleToBeGrey = new RenameRecentPosts();
 
 
 //Add placeholders to input fields in login page

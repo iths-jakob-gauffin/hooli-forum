@@ -1,0 +1,50 @@
+.wpforo-forum-description,
+.wpfcl-1 {
+    color: $darkgrey !important;
+}
+
+.wpforo-forum-icon {
+    i {
+        color: $grey !important;
+    }
+}
+
+.wpforo-forum-stat {
+    .wpfcl-1 {
+        color: $darkgrey !important;
+    }
+}
+
+.wpfl-2 {
+    .forum-wrap:not(:first-child) {
+        border-top: 1px solid $grey !important;
+    }
+}
+
+#wpforo-stat-header,
+#wpforo #wpforo-wrap #wpforo-poweredby {
+    background-color: #777777 !important;
+}
+
+#wpforo #wpforo-wrap #wpforo-title {
+    color: white !important;
+}
+
+#wpforo #wpforo-wrap #wpforo-title.greyTitle {
+    color: $grey !important;
+}
+
+.wpf-tags-title {
+    color: #565656 !important;
+}
+
+#wpf-msg-box {
+    display: none !important;
+}
+
+.wpf-subscribe-forum {
+    display: none !important;
+}
+.wpf-subscribe-topic {
+    display: none !important;
+}

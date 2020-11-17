@@ -86,77 +86,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/addPlaceholder.js":
-/*!*******************************!*\
-  !*** ./src/addPlaceholder.js ***!
-  \*******************************/
-/*! exports provided: addPlaceholder */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addPlaceholder", function() { return addPlaceholder; });
-var addPlaceholder = function addPlaceholder() {
-  document.querySelector("#user_login").placeholder = "Användarnamn";
-  document.querySelector("#user_pass").placeholder = "Lösenord";
-};
-
-/***/ }),
-
-/***/ "./src/addTopBorder.js":
-/*!*****************************!*\
-  !*** ./src/addTopBorder.js ***!
-  \*****************************/
-/*! exports provided: addTopBorder */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addTopBorder", function() { return addTopBorder; });
-var addTopBorder = function addTopBorder() {
-  var form = document.querySelector("#loginform");
-  var div = form.insertBefore(document.createElement("div"), form.firstChild);
-  div.classList.add("top-border");
-  var p = document.createElement("p");
-  p.innerText = "Logga in";
-  div.append(p);
-};
-
-/***/ }),
-
 /***/ "./src/app.js":
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
 /*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _addPlaceholder_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addPlaceholder.js */ "./src/addPlaceholder.js");
-/* harmony import */ var _addTopBorder_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./addTopBorder.js */ "./src/addTopBorder.js");
-
- // const name = (stuff) => {
-//     return stuff + "!";
-// };
-// const test = name("Hej");
-// console.log(test);
-// alert("hej");
-// // Import components.
-// import Example from "./components/example.js";
-// // Initialize your components on DOM Ready.
-// $(document).ready(() => {
-//     console.log("saker händer");
-//     Example.init({
-//         setting: "New setting",
-//     });
-// });
-// alert("nsakldnkas");
-//Add placeholders to input fields in login page
-
-Object(_addPlaceholder_js__WEBPACK_IMPORTED_MODULE_0__["addPlaceholder"])();
-Object(_addTopBorder_js__WEBPACK_IMPORTED_MODULE_1__["addTopBorder"])();
-console.log("hej från javascriptet");
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/src/app.js: Unexpected token (1:0)\n\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 1 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   | \u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 2 | \u001b[39m\u001b[36mimport\u001b[39m { addPlaceholder } from \u001b[32m\"./addPlaceholder.js\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 3 | \u001b[39m\u001b[36mimport\u001b[39m { addTopBorder} from \u001b[32m\"./addTopBorder.js\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 4 | \u001b[39m\u001b[0m\n    at Parser._raise (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:790:17)\n    at Parser.raiseWithData (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:783:17)\n    at Parser.raise (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:777:17)\n    at Parser.unexpected (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:9095:16)\n    at Parser.parseExprAtom (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:10529:20)\n    at Parser.parseExprSubscripts (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:10094:23)\n    at Parser.parseUpdate (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:10074:21)\n    at Parser.parseMaybeUnary (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:10063:17)\n    at Parser.parseExprOps (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:9933:23)\n    at Parser.parseMaybeConditional (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:9907:23)\n    at Parser.parseMaybeAssign (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:9870:21)\n    at Parser.parseExpressionBase (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:9815:23)\n    at /Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:9809:39\n    at Parser.allowInAnd (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:11504:16)\n    at Parser.parseExpression (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:9809:17)\n    at Parser.parseStatementContent (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:11770:23)\n    at Parser.parseStatement (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:11639:17)\n    at Parser.parseBlockOrModuleBlockBody (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:12221:25)\n    at Parser.parseBlockBody (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:12207:10)\n    at Parser.parseTopLevel (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:11570:10)\n    at Parser.parse (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:13381:10)\n    at parse (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/parser/lib/index.js:13434:38)\n    at parser (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/core/lib/transformation/normalize-file.js:99:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/@babel/core/lib/transform.js:27:41)\n    at transform.next (<anonymous>)\n    at step (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/gensync/index.js:261:32)\n    at /Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/gensync/index.js:273:13\n    at async.call.result.err.err (/Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/node_modules/gensync/index.js:223:11)");
 
 /***/ }),
 
