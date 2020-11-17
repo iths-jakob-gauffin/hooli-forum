@@ -109,16 +109,17 @@
         border: none;
     }
 
+    .Header__Icon {
+        font-size: 2rem;
+        margin-left: .5rem;
+    }
+
     &__LoggedInWrapper {
         display: flex;
         align-items: center;
 
         .Header__SearchLabel {
             margin-right: 3rem;
-        }
-
-        .Header__Icon {
-            font-size: 2rem;
         }
 
         .Header__IconLink {
