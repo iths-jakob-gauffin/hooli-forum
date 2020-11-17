@@ -255,29 +255,106 @@
   color: red;
 }
 
-.wpforo-profile-wrap .wpf-profile-plugin-menu {
-  display: none;
-  background-color: #f6f6f6;
-}
-
 .wpforo-profile-wrap .wpfy {
   display: none;
 }
 
-.wpforo-profile-wrap .h-header .profile-stat-data-item {
-  font-family: Varela Round;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 2, 5rem;
-  line-height: 2.4rem;
-  letter-spacing: -0.03em;
-  color: red !important;
-}
-
 .wpforo-profile-wrap .wpf-profile-info-wrap {
   display: flex;
-  padding-top: 0 !important;
-  left: 0px !important;
+  padding: 20px !important;
+  left: 10px !important;
+}
+
+.wpforo-profile-wrap #wpforo #wpforo-wrap .wpforo-profile-wrap .wpforo-profile-head {
+  background-image: none;
+  background-color: #f6f6f6 !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .wpforo-profile-head {
+  display: flex !important;
+  flex-direction: column-reverse !important;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+  background-color: #f6f6f6 !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-footer {
+  margin: 0 !important;
+  background-color: #ff9393 !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-footer:hover,
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-footer:visited,
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-footer:active {
+  color: #ff9393 !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-bottom {
+  border-bottom: 0px !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-bottom .wpf-profile-menu {
+  color: white;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-bottom .wpf-profile-menu:hover,
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-bottom .wpf-profile-menu:active {
+  color: #ff9393 !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .profile-rating-bar-wrap .wpfbg-7 .rating-bar-cell {
+  background-color: blue !important;
+}
+
+.remove:hover {
+  color: #333333;
+}
+
+#wpforo #wpforo-wrap .wpforo-subtop {
+  display: none !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-header .wpf-profile-info-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wpf-profile-plugin-menu {
+  display: none;
+  background: none;
+  background-color: #f6f6f6;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-header-info {
+  display: flex !important;
+  justify-self: flex-end !important;
+  justify-content: flex-end !important;
+  padding-left: 20px !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-top {
+  align-self: flex-end !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .wpf-profile-badge {
+  background-color: #7CC985 !important;
+  box-shadow: none !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-picture .avatar {
+  box-shadow: none !important;
+}
+
+#wpforo #wpforo-wrap .wpf-field .wpf-label {
+  color: #333333 !important;
+}
+
+#wpforo #wpforo-wrap .wpf-sbtn .wpf-sbtn-title span {
+  color: #333333 !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .wpf-username {
+  color: #333333 !important;
 }
 
 .wpforo-forum-description,
