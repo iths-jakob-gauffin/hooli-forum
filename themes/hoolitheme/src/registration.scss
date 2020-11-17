@@ -20,6 +20,8 @@
 
     .wpforo-register-content {
         border-top: none !important;
+        width: 50%;
+        margin: 0 auto;
 
         h3 {
             display: none;
@@ -27,7 +29,7 @@
 
         .wpf-field-wrap,
         .wpf-label-wrap {
-            width: 65% !important;
+            width: 100% !important;
         }
 
         .wpf-field {
@@ -40,6 +42,7 @@
         .wpf-field-wrap input,
         .wpf-label-wrap input {
             padding: 10px 20px 10px 34px !important;
+            margin: 0 !important;
         }
 
 
@@ -47,6 +50,14 @@
         .wpf-label-wrap i {
             left: 15px !important;
             top: 17px !important;
+        }
+
+        .fa-info-circle.wpf-reg-info {
+            padding-left: 0 !important;
+        }
+
+        .wpforo-legal-checkbox {
+            padding: 0 !important;
         }
 
     }
