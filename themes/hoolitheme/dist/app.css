@@ -71,11 +71,7 @@
 
 .Header__Form .Header__Icon {
   color: black;
-<<<<<<< HEAD
   font-size: 3rem;
-=======
-  font-size: 3.2rem;
->>>>>>> linus
   cursor: pointer;
   transition: all 0.2s ease-out;
 }
@@ -117,14 +113,11 @@
 .Header__Form .Header__SearchButton .Header__Icon:hover,
 .Header__Form .Header__SearchButton .Header__Icon:focus {
   color: #ff9393;
-<<<<<<< HEAD
 }
 
 .Header__SearchButton {
   background: none;
   border: none;
-=======
->>>>>>> linus
 }
 
 .Header__LoggedInWrapper {
@@ -161,10 +154,6 @@
 
 .wpforo-profile-wrap .wpfy {
   display: none;
-<<<<<<< HEAD
-  background-color: #f6f6f6;
-=======
->>>>>>> linus
 }
 
 .wpforo-profile-wrap .wpf-profile-info-wrap {
@@ -175,7 +164,7 @@
 
 .wpforo-profile-wrap #wpforo #wpforo-wrap .wpforo-profile-wrap .wpforo-profile-head {
   background-image: none;
-  background-color: #F6F6F6 !important;
+  background-color: #f6f6f6 !important;
 }
 
 #wpforo #wpforo-wrap .wpforo-profile-wrap .wpforo-profile-head {
@@ -183,7 +172,7 @@
   flex-direction: column-reverse !important;
   padding: 0 !important;
   margin-bottom: 0 !important;
-  background-color: #F6F6F6 !important;
+  background-color: #f6f6f6 !important;
 }
 
 #wpforo #wpforo-wrap .wpforo-profile-wrap .h-footer {
@@ -224,9 +213,45 @@
 
 #wpforo #wpforo-wrap .wpforo-profile-wrap .h-header .wpf-profile-info-wrap {
   display: flex;
-<<<<<<< HEAD
-  padding-top: 0 !important;
-  left: 0px !important;
+  justify-content: space-between;
+}
+
+.wpf-profile-plugin-menu {
+  display: none;
+  background: none;
+  background-color: #f6f6f6;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-header-info {
+  display: flex !important;
+  justify-self: flex-end !important;
+  justify-content: flex-end !important;
+  padding-left: 20px !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-top {
+  align-self: flex-end !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .wpf-profile-badge {
+  background-color: #7CC985 !important;
+  box-shadow: none !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .h-picture .avatar {
+  box-shadow: none !important;
+}
+
+#wpforo #wpforo-wrap .wpf-field .wpf-label {
+  color: #333333 !important;
+}
+
+#wpforo #wpforo-wrap .wpf-sbtn .wpf-sbtn-title span {
+  color: #333333 !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-profile-wrap .wpf-username {
+  color: #333333 !important;
 }
 
 .wpforo-forum-description,
@@ -824,47 +849,6 @@
 .Aside__ReviewItem:hover .Aside__ReviewCategory::after {
   background-color: #333333;
   transform: skewX(-23deg);
-=======
-  justify-content: space-between;
-}
-
-.wpf-profile-plugin-menu {
-  display: none;
-  background: none;
-  background-color: #F6F6F6;
-}
-
-#wpforo #wpforo-wrap .wpforo-profile-wrap .h-header-info {
-  display: flex !important;
-  justify-self: flex-end !important;
-  justify-content: flex-end !important;
-  padding-left: 20px !important;
-}
-
-#wpforo #wpforo-wrap .wpforo-profile-wrap .h-top {
-  align-self: flex-end !important;
-}
-
-#wpforo #wpforo-wrap .wpforo-profile-wrap .wpf-profile-badge {
-  background-color: #7CC985 !important;
-  box-shadow: none !important;
-}
-
-#wpforo #wpforo-wrap .wpforo-profile-wrap .h-picture .avatar {
-  box-shadow: none !important;
-}
-
-#wpforo #wpforo-wrap .wpf-field .wpf-label {
-  color: #333333 !important;
-}
-
-#wpforo #wpforo-wrap .wpf-sbtn .wpf-sbtn-title span {
-  color: #333333 !important;
-}
-
-#wpforo #wpforo-wrap .wpforo-profile-wrap .wpf-username {
-  color: #333333 !important;
->>>>>>> linus
 }
 
 * {

@@ -93,14 +93,11 @@
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-<<<<<<< HEAD
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _renameRecentPosts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./renameRecentPosts */ "./src/renameRecentPosts.js");
 
 var renameRecentPostsAndstyleTitleToBeGrey = new _renameRecentPosts__WEBPACK_IMPORTED_MODULE_0__["default"]();
-=======
->>>>>>> linus
 console.log("hej från javascriptet");
 
 function changeColors() {
