@@ -648,6 +648,7 @@
   z-index: 2;
   display: flex;
   justify-content: space-between;
+  height: 100%;
 }
 
 .Aside__ReviewImage {
@@ -671,7 +672,15 @@
 
 .Aside__ReviewTextWrapper {
   width: 100%;
+  height: 100%;
   margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Aside__TopWrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -702,6 +711,67 @@
   font-size: 1.5rem;
   color: #000000;
   font-weight: 700;
+}
+
+.Aside__ReviewHeadline {
+  font-family: Varela Round;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2, 5rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.03em;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-weight: 900;
+}
+
+.Aside__ReviewCategoryList {
+  font-family: Varela Round;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2, 5rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  letter-spacing: 1px;
+  padding-right: 0.5rem;
+}
+
+.Aside__ReviewCategory {
+  margin-left: 0.2rem;
+  background-color: none;
+  padding: 0.3rem 0.9rem;
+  border-radius: 1rem;
+  transition: color 0.4s ease-in-out;
+  position: relative;
+}
+
+.Aside__ReviewItem:hover .Aside__ReviewCategory {
+  color: #fff238;
+}
+
+.Aside__ReviewCategory::after {
+  content: "";
+  background-color: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.8s ease-in-out;
+  transform: skewX(-23deg);
+}
+
+.Aside__ReviewItem:hover .Aside__ReviewCategory::after {
+  background-color: #333333;
+  transform: skewX(-23deg);
 }
 
 * {

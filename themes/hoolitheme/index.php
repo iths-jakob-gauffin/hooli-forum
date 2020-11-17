@@ -66,9 +66,17 @@
         'intervju' => 'Pink'
     );
 
+    function getParentName($categoryArray){
+        foreach($categoryArray as $category){
+            if($category->category_parent == 0){
+                return strtolower($category->name);        
+            };
+        };
+        return;
+    };
+
     while(have_posts()){
         the_post();
-        echo var_dump(get_the_category()[0]->category_parent);
         ?>
             <article class="Blog__Post">
                 <a href="<?php the_permalink(); ?>" class="Blog__SinglePostLink"></a>
@@ -81,22 +89,25 @@
                     ?>)">
                     </div>      
                         <section class="<?php   
-                            if(has_category() AND !get_the_category()[0]->category_parent){
-                                
-                                $cssModifier = get_the_category()[0]->category_nicename;
-                                
-                            echo 'Blog__Preamble Blog__Preamble--' .             $categoryColors[$cssModifier];            
+                            if(has_category()){
+                                $parentCategoryName = getParentName(get_the_category());
+                                $cssModifier = $parentCategoryName;        
+                                echo 'Blog__Preamble Blog__Preamble--' . $categoryColors[$cssModifier];            
                             }else{
                                 echo 'Blog__Preamble';
                             };
                         ?>">
-                            <div class="Blog__Label"><?php the_category(); ?></div>
-                            <h2 class="Blog__PostTitle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2> 
+                            <div class="Blog__Label"><?php 
+                            echo strtoupper($parentCategoryName);
+                            ?></div>
+                            <h2 class="Blog__PostTitle"><a href="<?php the_permalink(); ?>"><?php 
+                            the_title(); ?></a></h2> 
                             <div class="Blog__Text">
-                            <?php $content = get_the_content(); 
+                            <?php 
+                            $content = get_the_content(); 
                             echo wp_trim_words( $content, 20); 
                             ?><a href="<?php the_permalink(); ?>" class="Blog__ReadMoreLink">Läs mer</a></div>   
-                        </section>
+                    </section>
                 </div>
                 
             </article>
@@ -202,8 +213,23 @@
                                     <div class="Aside__Wrapper">
                                         <img src="<?php the_post_thumbnail_url( 'asideReview' ); ?>" alt="BYT UT" class="Aside__ReviewImage">
                                         <div class="Aside__ReviewTextWrapper">
-                                            <h1 class="Aside__ReviewAuthor"><?php echo get_field('review_author'); ?></h1>
-                                            <span class="Aside__EventExcerpt"><?php echo wp_trim_words(get_the_excerpt(), 13, '..."');?></span>
+                                            <div class="Aside__TopWrapper">
+                                                <h3 class="Aside__ReviewAuthor"><?php echo get_field('review_author'); ?></h3>
+                                                <span class="Aside__EventExcerpt"><?php echo wp_trim_words(get_the_excerpt(), 13, '..."');?></span>
+                                            </div>
+                                            <div class="Aside__BottomWrapper">
+                                                <!-- <span class="Aside__ReviewHeadline">Recension:</span> -->
+                                                <ul class="Aside__ReviewCategoryList">
+                                                    <?php 
+                                                        foreach(get_the_category() as $category){
+                                                            if($category->category_parent != 0){?>
+                                                            <li class="Aside__ReviewCategory"><?php echo $category->name; ?></li>
+                                                                <?php
+                                                            }
+                                                        }
+                                                    ?>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
