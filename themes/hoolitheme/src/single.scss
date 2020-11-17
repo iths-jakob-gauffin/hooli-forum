@@ -1,0 +1,21 @@
+.main-container { 
+    .single {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+
+        h1, p {
+            font-family: 'varela round';
+        }
+
+        h1 {
+            font-size: 3rem;
+            padding: 3rem 0;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
