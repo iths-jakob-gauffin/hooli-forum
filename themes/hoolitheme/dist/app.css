@@ -954,7 +954,6 @@
   transform: skewX(-23deg);
 }
 
-<<<<<<< HEAD
 .wpforo-login-wrap .top-border {
   width: 100%;
   background-color: #ff9393;
@@ -1062,7 +1061,8 @@
   font-family: "varela round";
   font-size: 1.5rem;
   padding: 5rem 0;
-=======
+}
+
 .Aside__NewsItem {
   width: 90%;
   background-color: #ffffff;
@@ -1136,7 +1136,6 @@
   border-radius: 50%;
   background-color: #7cc9fb;
   z-index: 1;
->>>>>>> jakob
 }
 
 * {
