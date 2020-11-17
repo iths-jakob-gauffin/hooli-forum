@@ -45,7 +45,7 @@
                 padding: 0.5rem;
                 text-transform: uppercase;
                 text-decoration: none;
-                transition: color 0.3s ease-out;
+                transition: color 0.2s ease-out;
                 display: inline-block;
 
                 &:hover,
@@ -61,26 +61,26 @@
 
         .Header__Icon {
             color: black;
-            font-size: 3.2rem;
+            font-size: 3rem;
             cursor: pointer;
-            transition: all 0.3s ease-out;
+            transition: all 0.2s ease-out;
         }
 
         .Header__Input {
             font-family: Varela Round;
             font-style: normal;
             font-weight: normal;
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             line-height: 2.4rem;
             letter-spacing: -0.03em;
             border: none;
             border-bottom: 2px solid black;
-            transition: all 0.3s ease-out;
+            transition: all 0.2s ease-out;
             width: 10rem;
             color: black;
 
             @include lg {
-                width: 15.9rem;
+                width: 13rem;
             }
 
             &:hover,
@@ -118,12 +118,12 @@
         }
 
         .Header__Icon {
-            font-size: 3.2rem;
+            font-size: 2rem;
         }
 
         .Header__IconLink {
             color: black;
-            transition: color 0.3s ease-out;
+            transition: color 0.2s ease-out;
 
             &:hover,
             &:focus {

@@ -2,7 +2,7 @@
   font-family: Varela Round;
   font-style: normal;
   font-weight: normal;
-  font-size: 2rem;
+  font-size: 1.9rem;
   line-height: 2.4rem;
   letter-spacing: -0.03em;
   padding-top: 8rem;
@@ -54,7 +54,7 @@
   padding: 0.5rem;
   text-transform: uppercase;
   text-decoration: none;
-  transition: color 0.3s ease-out;
+  transition: color 0.2s ease-out;
   display: inline-block;
 }
 
@@ -71,28 +71,28 @@
 
 .Header__Form .Header__Icon {
   color: black;
-  font-size: 3.2rem;
+  font-size: 3rem;
   cursor: pointer;
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .Header__Form .Header__Input {
   font-family: Varela Round;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   line-height: 2.4rem;
   letter-spacing: -0.03em;
   border: none;
   border-bottom: 2px solid black;
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
   width: 10rem;
   color: black;
 }
 
 @media (min-width: 992px) {
   .Header__Form .Header__Input {
-    width: 15.9rem;
+    width: 13rem;
   }
 }
 
@@ -130,12 +130,12 @@
 }
 
 .Header__LoggedInWrapper .Header__Icon {
-  font-size: 3.2rem;
+  font-size: 2rem;
 }
 
 .Header__LoggedInWrapper .Header__IconLink {
   color: black;
-  transition: color 0.3s ease-out;
+  transition: color 0.2s ease-out;
 }
 
 .Header__LoggedInWrapper .Header__IconLink:hover,
@@ -254,7 +254,7 @@
   font-family: Varela Round;
   font-style: normal;
   font-weight: normal;
-  font-size: 2rem;
+  font-size: 1.9rem;
   line-height: 2.4rem;
   letter-spacing: -0.03em;
   height: 100%;
