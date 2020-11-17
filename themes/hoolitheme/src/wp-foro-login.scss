@@ -1,0 +1,44 @@
+@import "./variables.scss";
+
+.wpforo-login-wrap {
+
+    .top-border {
+        width: 100%;
+        background-color: $mf-pink;
+        margin-bottom: 5rem !important;
+        padding: 7px 12px !important;
+
+        p {
+            color: white !important;
+            font-size: 14px !important;
+            padding: 5px 0 !important;
+        }
+    }
+    .wpforo-login-content {
+        border: none !important;
+        padding: 0 0 0 20px !important;
+
+        h3 {
+            display: none;
+        }
+
+        .wpf-forgot-pass {
+            display: none;
+        }
+
+        .wpforo-table,
+        .wpf-field {
+            background-color: #F6F6F6 !important;
+        }
+
+        .wpf-login-text {
+            background-color: white;
+        }
+
+        .wpf-field .wpf-field-wrap input[type="submit"] {
+            width: 60% !important;
+            font-family: 'varela round';
+            font-size: 14px !important;
+        }
+    }
+}

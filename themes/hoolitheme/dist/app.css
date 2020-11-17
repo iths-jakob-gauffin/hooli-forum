@@ -954,6 +954,115 @@
   transform: skewX(-23deg);
 }
 
+.wpforo-login-wrap .top-border {
+  width: 100%;
+  background-color: #ff9393;
+  margin-bottom: 5rem !important;
+  padding: 7px 12px !important;
+}
+
+.wpforo-login-wrap .top-border p {
+  color: white !important;
+  font-size: 14px !important;
+  padding: 5px 0 !important;
+}
+
+.wpforo-login-wrap .wpforo-login-content {
+  border: none !important;
+  padding: 0 0 0 20px !important;
+}
+
+.wpforo-login-wrap .wpforo-login-content h3 {
+  display: none;
+}
+
+.wpforo-login-wrap .wpforo-login-content .wpf-forgot-pass {
+  display: none;
+}
+
+.wpforo-login-wrap .wpforo-login-content .wpforo-table,
+.wpforo-login-wrap .wpforo-login-content .wpf-field {
+  background-color: #F6F6F6 !important;
+}
+
+.wpforo-login-wrap .wpforo-login-content .wpf-login-text {
+  background-color: white;
+}
+
+.wpforo-login-wrap .wpforo-login-content .wpf-field .wpf-field-wrap input[type=submit] {
+  width: 60% !important;
+  font-family: "varela round";
+  font-size: 14px !important;
+}
+
+.wpforo-register-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wpforo-register-wrap .top-border {
+  width: 100%;
+  background-color: #ff9393;
+  padding: 7px 12px !important;
+}
+
+.wpforo-register-wrap .top-border p {
+  color: white !important;
+  font-size: 14px !important;
+  padding: 5px 0 !important;
+}
+
+.wpforo-register-wrap .wpforo-register-content {
+  border-top: none !important;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.wpforo-register-wrap .wpforo-register-content h3 {
+  display: none;
+}
+
+.wpforo-register-wrap .wpforo-register-content .wpf-field-wrap,
+.wpforo-register-wrap .wpforo-register-content .wpf-label-wrap {
+  width: 100% !important;
+}
+
+.wpforo-register-wrap .wpforo-register-content .wpf-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: none !important;
+}
+
+.wpforo-register-wrap .wpforo-register-content .wpf-field-wrap input,
+.wpforo-register-wrap .wpforo-register-content .wpf-label-wrap input {
+  padding: 10px 20px 10px 34px !important;
+  margin: 0 !important;
+}
+
+.wpforo-register-wrap .wpforo-register-content .wpf-field-wrap i,
+.wpforo-register-wrap .wpforo-register-content .wpf-label-wrap i {
+  left: 15px !important;
+  top: 17px !important;
+}
+
+.wpforo-register-wrap .wpforo-register-content .fa-info-circle.wpf-reg-info {
+  padding-left: 0 !important;
+}
+
+.wpforo-register-wrap .wpforo-register-content .wpforo-legal-checkbox {
+  padding: 0 !important;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-family: "varela round";
+  font-size: 1.5rem;
+  padding: 5rem 0;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

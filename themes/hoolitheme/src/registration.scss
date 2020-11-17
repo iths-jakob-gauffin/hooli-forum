@@ -1,0 +1,64 @@
+@import "./variables.scss";
+
+.wpforo-register-wrap {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .top-border {
+        width: 100%;
+        background-color: $mf-pink;
+        padding: 7px 12px !important;
+
+        p {
+            color: white !important;
+            font-size: 14px !important;
+            padding: 5px 0 !important;
+        }
+    }
+
+    .wpforo-register-content {
+        border-top: none !important;
+        width: 50%;
+        margin: 0 auto;
+
+        h3 {
+            display: none;
+        }
+
+        .wpf-field-wrap,
+        .wpf-label-wrap {
+            width: 100% !important;
+        }
+
+        .wpf-field {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: none !important;
+        }
+
+        .wpf-field-wrap input,
+        .wpf-label-wrap input {
+            padding: 10px 20px 10px 34px !important;
+            margin: 0 !important;
+        }
+
+
+        .wpf-field-wrap i,
+        .wpf-label-wrap i {
+            left: 15px !important;
+            top: 17px !important;
+        }
+
+        .fa-info-circle.wpf-reg-info {
+            padding-left: 0 !important;
+        }
+
+        .wpforo-legal-checkbox {
+            padding: 0 !important;
+        }
+
+    }
+}
