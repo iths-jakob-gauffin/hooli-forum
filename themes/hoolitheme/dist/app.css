@@ -297,11 +297,6 @@
   color: white;
 }
 
-#wpforo #wpforo-wrap .wpforo-profile-wrap .h-bottom .wpf-profile-menu:hover,
-#wpforo #wpforo-wrap .wpforo-profile-wrap .h-bottom .wpf-profile-menu:active {
-  color: #ff9393 !important;
-}
-
 #wpforo #wpforo-wrap .wpforo-profile-wrap .profile-rating-bar-wrap .wpfbg-7 .rating-bar-cell {
   background-color: blue !important;
 }

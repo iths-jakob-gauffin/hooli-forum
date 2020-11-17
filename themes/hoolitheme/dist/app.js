@@ -138,8 +138,7 @@ var RenameRecentPosts = /*#__PURE__*/function () {
     this.title = document.querySelector("#wpforo-title");
     this.breadcrumbText = document.querySelector("#wpforo-wrap > div.wpforo-subtop > div.wpf-breadcrumb > div.wpf-item-element.active > span");
     this.renameTitle();
-    this.renameBreadcrumb();
-    this.changeTitleColor();
+    this.renameBreadcrumb(); // this.changeTitleColor();
   }
 
   _createClass(RenameRecentPosts, [{
@@ -179,8 +178,8 @@ var RenameRecentPosts = /*#__PURE__*/function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/src/app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! /Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/src/app.scss */"./src/app.scss");
+__webpack_require__(/*! /Users/linuskallin/Sites/wp-forum/wp-content/themes/hoolitheme/src/app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! /Users/linuskallin/Sites/wp-forum/wp-content/themes/hoolitheme/src/app.scss */"./src/app.scss");
 
 
 /***/ })

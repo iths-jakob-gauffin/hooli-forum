@@ -6,7 +6,7 @@ class RenameRecentPosts {
         );
         this.renameTitle();
         this.renameBreadcrumb();
-        this.changeTitleColor();
+        // this.changeTitleColor();
     }
 
     renameTitle() {
