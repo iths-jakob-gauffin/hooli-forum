@@ -284,10 +284,11 @@
                         foreach($newsPosts as $news){
                             ?>
                             <li class="Aside__NewsItem">
-                                    <a href="<?php the_permalink(); ?>" class="Aside__NewsLink"></a>
-                                    <h4><?php echo $news->post_title; ?></h4>        
+                                <a href="<?php the_permalink(); ?>" class="Aside__NewsLink"></a>
+                                <div class="Aside__NewsTextWrapper">
+                                    <h4 class="Aside__NewsTitle"><?php echo $news->post_title; ?></h4>        
                                     <div class="Aside__NewsPreamble">
-                                        <?php echo $news->post_content; ?>
+                                        <?php echo wp_trim_words($news->post_content, 10, "..."); ?>
                                     </div>
                                     <div class="Aside__Published">
                                         <?php 
@@ -295,6 +296,10 @@
                                         echo $dateToEcho->format('d M - h:i'); 
                                         ?>
                                     </div>
+                                </div>
+                                <div class="Aside__NewsIconWrapper">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
                             </li>
                         <?php
                         }    
