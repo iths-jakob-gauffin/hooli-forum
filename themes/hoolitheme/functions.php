@@ -51,7 +51,7 @@ function hooliScripts(){
 
     }
 
-    if ($url === site_url('/wp-login.php') || $url === site_url('/wp-login.php?loggedout=true&wp_lang=en_US')) {
+    if ($url === site_url('/wp-login.php') || $url === site_url('/wp-login.php?loggedout=true&wp_lang=en_US' || $url === site_url('http://foghorn.se/iths/hooliforum/wp-login.php?loggedout=true&wp_lang=sv_SE'))) {
         wp_register_script('addTopBorder', get_template_directory_uri() . '/src/addTopBorder.js', ['jquery'], 1, true);
         wp_register_script('addPlaceholder', get_template_directory_uri() . '/src/addPlaceholder.js', ['jquery'], 1, true);
         wp_enqueue_script('addTopBorder');

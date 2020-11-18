@@ -11,8 +11,8 @@
         ?>  
             <div class="main-container">
                 <div class="single">
-                    <h1 class="HomePage__Title"><?php $titeln =  get_the_title(); echo $titeln; ?></h1> 
-                    <p class="HomePage__Text"><?php echo get_the_content(); ?></p>   
+                    <h1><?php $titeln =  get_the_title(); echo $titeln; ?></h1>
+                    <p><?php echo get_the_content(); ?></p>
                     <div class="links">
                         <a href="<?php echo site_url('/blog');?>">Tillbaka till blog</a>
                         <a href="<?php echo site_url('/');?>">Tillbaka till hemsidan</a>

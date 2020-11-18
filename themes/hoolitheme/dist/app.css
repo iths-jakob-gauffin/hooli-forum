@@ -496,6 +496,10 @@
   color: #333333;
 }
 
+.Blog__Text {
+  color: #ffffff;
+}
+
 .Blog__Post {
   margin-bottom: 6rem;
   background-color: #f6f6f6;
@@ -598,7 +602,7 @@
   letter-spacing: -0.03em;
   text-decoration: none;
   font-size: 3rem;
-  color: black;
+  color: #ffffff;
 }
 
 .Blog__Post .Blog__Text {
@@ -1056,7 +1060,7 @@
 }
 
 .footer {
-  color: #565656;
+  color: lightgrey;
   display: flex;
   justify-content: space-between;
   font-family: "varela round";
