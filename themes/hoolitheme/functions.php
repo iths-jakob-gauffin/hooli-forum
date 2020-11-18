@@ -23,36 +23,36 @@ function hooliScripts(){
 
     }
 
-    // This gets all profile-urls, to then check to show/hide wpforo statistics
+    // These commands gets all profile-urls, to then check to show/hide wpforo statistics and breadcrumb
     global $wpforo;
     $current_user_id = get_current_user_id();
-    $profileUrl = $wpforo->member->get_profile_url( $current_user_id );
-    $truncatedUrl = substr($profileUrl, 0, strpos($profileUrl, "profile")); 
-    $userName = $wpforo->current_object['user']['user_nicename'];
-    $accountUrl = $truncatedUrl . 'account/' . $userName . '/';
-    $activityUrl = $truncatedUrl . 'activity/' . $userName . '/';
-    $subscriptionsUrl = $truncatedUrl . 'subscriptions/' . $userName . '/';
+    $profileUrlWithUsername = $wpforo->member->get_profile_url( $current_user_id );
+    $truncatedUrl = substr($profileUrl, 0, strpos($profileUrlWithUsername, "profile")); 
+    $profileUrl = $truncatedUrl . 'profile/';
+    $accountUrl = $truncatedUrl . 'account/';
+    $activityUrl = $truncatedUrl . 'activity/';
+    $subscriptionsUrl = $truncatedUrl . 'subscriptions/';
     $allProfileUrls = [$profileUrl, $accountUrl, $activityUrl, $subscriptionsUrl];
 
     $currentUrl = home_url( add_query_arg( null, null ));
 
     function checkIfProfileUrl($arrayOfUrls, $currentUrl){
         foreach ($arrayOfUrls as $url) {
-            if (strpos($currentUrl, $url) !== FALSE) {
+            if(strpos($currentUrl, $url) !== false){
                 return true;
             }
         };
         return false;
     };
 
+    //Om det inte är frontpage OCH om currentUrl inte är en av profilsidorna
     if(!is_front_page() AND !checkIfProfileUrl($allProfileUrls, $currentUrl)){
         wp_register_style('hideStatistics', get_template_directory_uri() . '/dist/hideStatistics.css', [], 1, 'all');
         wp_enqueue_style('hideStatistics');
-    } else {
+    } else{
         wp_register_style('removeBreadcrumb', get_template_directory_uri() . '/dist/removeBreadcrumb.css', [], 1, 'all');
         wp_enqueue_style('removeBreadcrumb');
     }
-    
 
     if ($url === site_url('community/?foro=signin')) {
         wp_register_script('addTopBorder', get_template_directory_uri() . '/src/addTopBorder.js', ['jquery'], 1, true);
