@@ -58,14 +58,6 @@ function hooliScripts(){
 
     }
 
-    $word = "profile";
-    if (strpos($url, $word)) {
-        wp_register_script('changeColorRatingBar', get_template_directory_uri() . '/src/changeColorRatingBar.js', ['jquery'], 1, true);
-        wp_enqueue_script('changeColorRatingBar');
-
-    }
-
-
 }
  
 add_action('wp_enqueue_scripts', 'hooliScripts');
