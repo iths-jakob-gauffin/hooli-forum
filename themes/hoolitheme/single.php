@@ -8,14 +8,19 @@
 
         // echo $posta;
         
-        ?>
-            <h1>Här är single.php</h1>
-            <h2 class="HomePage__Title"><?php $titeln =  get_the_title(); echo $titeln; ?></h2> 
-            <p class="HomePage__Text"><?php echo get_the_content(); ?></p>   
-
-            <a href="<?php echo site_url('/blog');?>">Tillbaka till blog</a>
-            <a href="<?php echo site_url('/');?>">Tillbaka till hemsidan</a>
-
+        ?>  
+            <div class="main-container">
+                <div class="single">
+                    <h1><?php $titeln =  get_the_title(); echo $titeln; ?></h1>
+                    <p class="author">Skriven av <?php echo get_the_author(); ?></p>
+                    <div class="lines"></div>
+                    <p><?php echo get_the_content(); ?></p>
+                    <div class="links">
+                        <a href="<?php echo site_url('/blog');?>">Tillbaka till bloggen</a>
+                        <a href="<?php echo site_url('/');?>">Tillbaka till forumet</a>
+                    </div>
+                </div>
+            </div>
         <?php
 
     }
