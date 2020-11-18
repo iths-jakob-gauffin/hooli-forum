@@ -20,7 +20,7 @@ get_header();
             ?>)">
           </div>
 
-        <h1 class="Archive__Title"><?php the_title(); ?></h1>
+        <h1 class="Archive__Title Archive__Title--Blue"><?php the_title(); ?></h1>
         <p class="Archive__Subtitle"><?php echo get_field('subtitle'); ?></p>
 
         <ul class="Archive__List">
@@ -28,13 +28,13 @@ get_header();
 
             $interviewPosts = new WP_Query( array(
                 'posts_per_page' => -1,
-                'category_name' => 'intervju'
+                'category_name' => 'nyheter'
             ) );
 
             while($interviewPosts->have_posts()){
                 $interviewPosts->the_post();
                 ?>
-                    <li class="Archive__ListItem">
+                    <li class="Archive__ListItem Archive__ListItem--Blue">
                         <a href="<?php the_permalink(); ?>" class="Archive__ArticleLink"></a>
                         <article class="Archive__Article">
                             <h3 class="Archive__ArticlePerson">Intervju med <?php echo get_field('person_subject'); ?></h3>

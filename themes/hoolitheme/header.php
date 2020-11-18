@@ -9,9 +9,6 @@
 <body <?php body_class(); ?> >
     <div class="main-container">
         <header class="Header">
-        <?php echo home_url(); ?> 
-        <br>
-        <?php $currentUrl = home_url( add_query_arg( null, null )); echo $currentUrl; ?>
             <div class="Header__ImageWrapper">
                 <a href="<?php echo site_url('/')?>" title="Tillbaka till startsidan"></a>
                 <img src="<?php echo get_theme_file_uri('/dist/images/Musikfolk.svg'); ?>" alt="Musikfolk logotype" class="Header__Image">

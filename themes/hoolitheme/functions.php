@@ -98,6 +98,7 @@ function hooliThemeFeatures(){
     add_image_size( 'blogPresentation', 711, 470, true );
     add_image_size( 'asideEvent', 250, 90, true );
     add_image_size( 'asideReview', 100, 100, true );
+    add_image_size( 'blogBackgroundImage', 959, 300, true );
 
 }
 
@@ -131,4 +132,31 @@ function redirectToFrontend(){
 }
 add_action('admin_init', 'redirectToFrontend');
 
+
+    //ladda bara in de kommande postsen med kategori "Intervju" i page-interjuer.php:
+    function queryPostsGetter($query){
+        if(is_post_type_archive('post') AND $query->is_main_query()){
+            $query->set('posts_per_page', -1);
+            $query->set('orderby', 'title');
+            $query->set('order', 'ASC');
+        }
+
+        if(!is_admin() AND is_post_type_archive('event') AND $query->is_main_query()){
+            $today = date('Ymd');
+            $query->set('posts_per_page', -1);
+            $query->set('meta_key', 'event_date');
+            $query->set('orderby', 'meta_value_num');
+            $query->set('order', 'ASC');
+            $query->set('meta_query', array(
+                array(
+                    'key' => 'event_date',
+                    'compare' => '>=',
+                    'value' => $today,
+                    'type' => 'numeric'
+                )
+            ));
+        }
+    }
+
+    add_action('pre_get_posts', 'queryPostsGetter');
 
