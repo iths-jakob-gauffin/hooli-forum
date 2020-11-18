@@ -343,10 +343,6 @@
   color: #333333;
 }
 
-#wpforo #wpforo-wrap .wpforo-subtop {
-  display: none !important;
-}
-
 #wpforo #wpforo-wrap .wpforo-profile-wrap .h-header .wpf-profile-info-wrap {
   display: flex;
   justify-content: space-between;
@@ -410,10 +406,6 @@
 #wpforo-stat-header,
 #wpforo #wpforo-wrap #wpforo-poweredby {
   background-color: #777777 !important;
-}
-
-#wpforo #wpforo-wrap #wpforo-title {
-  color: white !important;
 }
 
 #wpforo #wpforo-wrap #wpforo-title.greyTitle {

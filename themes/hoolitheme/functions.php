@@ -17,9 +17,10 @@ function hooliScripts(){
     // Add extra css on certain pages to remove unwanted breadcrumbs and title in wpForo    
     $url = home_url( add_query_arg( null, null ));
 
-    if(is_front_page() OR $url === site_url('community/') ){
-        wp_register_style('notFrontPageOrCommunity', get_template_directory_uri() . '/dist/notFrontPageOrCommunity.css', [], 1, 'all');
-        wp_enqueue_style('notFrontPageOrCommunity');
+    if(is_front_page() OR $url === site_url('community/') OR $url === site_url('community/senaste-inlaggen/')){
+        wp_register_style('notFrontPageOrCommunityOrSenasteInlagg', get_template_directory_uri() . '/dist/notFrontPageOrCommunityOrSenasteInlagg.css', [], 1, 'all');
+        wp_enqueue_style('notFrontPageOrCommunityOrSenasteInlagg');
+
     }
 
     // This gets all profile-urls, to then check to show/hide wpforo statistics
@@ -42,13 +43,16 @@ function hooliScripts(){
             }
         };
         return false;
-
     };
 
     if(!is_front_page() AND !checkIfProfileUrl($allProfileUrls, $currentUrl)){
         wp_register_style('hideStatistics', get_template_directory_uri() . '/dist/hideStatistics.css', [], 1, 'all');
         wp_enqueue_style('hideStatistics');
+    } else {
+        wp_register_style('removeBreadcrumb', get_template_directory_uri() . '/dist/removeBreadcrumb.css', [], 1, 'all');
+        wp_enqueue_style('removeBreadcrumb');
     }
+    
 
     if ($url === site_url('community/?foro=signin')) {
         wp_register_script('addTopBorder', get_template_directory_uri() . '/src/addTopBorder.js', ['jquery'], 1, true);
