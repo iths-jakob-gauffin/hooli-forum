@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Forum - wpForo\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-31 19:43+0400\n"
-"PO-Revision-Date: 2018-08-31 19:43+0400\n"
+"PO-Revision-Date: 2020-11-18 11:58+0100\n"
 "Last-Translator: Johan <johan@fotointresse.se>\n"
 "Language-Team: Swedish\n"
 "Language: sv_SE\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: wpforo.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -2497,7 +2497,7 @@ msgstr ""
 
 #: wpf-admin/tools-tabs/misc.php:104 wpf-includes/wpf-phrases.php:701
 msgid "Recent Posts"
-msgstr ""
+msgstr "Senaste inläggen"
 
 #: wpf-admin/tools-tabs/misc.php:112
 msgid "Profile Home"
@@ -5380,7 +5380,7 @@ msgstr ""
 
 #: wpf-includes/wpf-phrases.php:690
 msgid "Add Reply"
-msgstr ""
+msgstr "Svara"
 
 #: wpf-includes/wpf-phrases.php:691
 msgid "Forums RSS Feed"
@@ -5782,7 +5782,7 @@ msgstr ""
 
 #: wpf-includes/wpf-phrases.php:799
 msgid "Topic Tags"
-msgstr ""
+msgstr "Tags"
 
 #: wpf-includes/wpf-phrases.php:800
 msgid "Topic Tag"
@@ -5810,35 +5810,35 @@ msgstr ""
 
 #: wpf-includes/wpf-phrases.php:806
 msgid "Next Topic"
-msgstr ""
+msgstr "Nästa ämne"
 
 #: wpf-includes/wpf-phrases.php:807
 msgid "Previous Topic"
-msgstr ""
+msgstr "Föregående ämne"
 
 #: wpf-includes/wpf-phrases.php:808
 msgid "All forum topics"
-msgstr ""
+msgstr "Alla ämnen"
 
 #: wpf-includes/wpf-phrases.php:809
 msgid "No tags found"
-msgstr ""
+msgstr "Inga tags hittade"
 
 #: wpf-includes/wpf-phrases.php:810
 msgid "Forum contains no unread posts"
-msgstr ""
+msgstr "Forumet innehåller inga olästa inlägg"
 
 #: wpf-includes/wpf-phrases.php:811
 msgid "Forum contains unread posts"
-msgstr ""
+msgstr "Forumet innehåller olästa inlägg"
 
 #: wpf-includes/wpf-phrases.php:812
 msgid "Mark all read"
-msgstr ""
+msgstr "Markera alla som lästa"
 
 #: wpf-includes/wpf-phrases.php:813
 msgid "Not Replied"
-msgstr ""
+msgstr "Inga svar"
 
 #: wpf-includes/wpf-phrases.php:814
 msgid "default"
