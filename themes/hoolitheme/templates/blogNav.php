@@ -1,5 +1,5 @@
 <nav class="Blog__Nav">
-    <a href="<?php esc_url(site_url('/')); ?>" class="Blog__Title">Bloggen</a>
+    <a href="<?php echo esc_url(site_url('/blog')); ?>" class="Blog__Title">Bloggen</a>
     <ul class="Blog__NavList">
         <li class="Blog__NavItem">
             <a href="<?php echo esc_url(site_url('/intervjuer')); ?>" class="Blog__NavLink"></a>
