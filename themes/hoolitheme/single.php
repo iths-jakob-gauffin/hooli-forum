@@ -14,8 +14,8 @@
                     <h1><?php $titeln =  get_the_title(); echo $titeln; ?></h1>
                     <p><?php echo get_the_content(); ?></p>
                     <div class="links">
-                        <a href="<?php echo site_url('/blog');?>">Tillbaka till blog</a>
-                        <a href="<?php echo site_url('/');?>">Tillbaka till hemsidan</a>
+                        <a href="<?php echo site_url('/blog');?>">Tillbaka till bloggen</a>
+                        <a href="<?php echo site_url('/');?>">Tillbaka till forumet</a>
                     </div>
                 </div>
             </div>

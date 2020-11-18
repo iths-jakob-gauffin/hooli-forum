@@ -1071,21 +1071,42 @@
 .main-container .single {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 0 10rem;
+}
+
+.main-container .single img {
+  padding-top: 3rem;
+  width: 600px;
 }
 
 .main-container .single h1,
-.main-container .single p {
+.main-container .single p,
+.main-container .single a {
   font-family: "varela round";
 }
 
 .main-container .single h1 {
   font-size: 3rem;
-  padding: 3rem 0;
+  padding: 3rem 12rem;
+  align-self: flex-start;
 }
 
 .main-container .single p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
+  padding: 0 12rem;
+}
+
+.main-container .single a {
+  text-decoration: none;
+  margin: 0 2rem;
+  font-size: 1.3rem;
+  color: #565656;
+}
+
+.main-container .single a:hover {
+  color: #ff9393;
 }
 
 * {
