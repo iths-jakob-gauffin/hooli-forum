@@ -400,7 +400,15 @@
 }
 
 .wpforo-forum-stat .wpfcl-1 {
-  color: #333333 !important;
+  color: #838383 !important;
+}
+
+#wpforo #wpforo-wrap .wpfl-2 .wpforo-forum-stat {
+  color: #838383 !important;
+}
+
+#wpforo #wpforo-wrap .wpfl-2 .wpforo-last-post-info {
+  color: #838383 !important;
 }
 
 .wpfl-2 .forum-wrap:not(:first-child) {
@@ -413,7 +421,7 @@
 }
 
 #wpforo #wpforo-wrap #wpforo-title {
-  color: white !important;
+  color: #333333 !important;
 }
 
 #wpforo #wpforo-wrap #wpforo-title.greyTitle {
@@ -434,6 +442,22 @@
 
 .wpf-subscribe-topic {
   display: none !important;
+}
+
+#wpforo #wpforo-wrap .wpf-action {
+  color: #838383 !important;
+}
+
+#wpforo #wpforo-wrap .wpf-action:hover {
+  color: #333333 !important;
+}
+
+#wpforo #wpforo-wrap .wpf-action.wpforo-tools {
+  color: white !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-post .wpforo-post-content p {
+  color: #333333 !important;
 }
 
 .Blog {

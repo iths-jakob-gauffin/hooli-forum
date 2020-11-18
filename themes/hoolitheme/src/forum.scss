@@ -11,8 +11,16 @@
 
 .wpforo-forum-stat {
     .wpfcl-1 {
-        color: $darkgrey !important;
+        color: $mediumgrey !important;
     }
+}
+
+#wpforo #wpforo-wrap .wpfl-2 .wpforo-forum-stat{
+    color: $mediumgrey !important;
+}
+
+#wpforo #wpforo-wrap .wpfl-2 .wpforo-last-post-info{
+    color: $mediumgrey !important;
 }
 
 .wpfl-2 {
@@ -27,7 +35,7 @@
 }
 
 #wpforo #wpforo-wrap #wpforo-title {
-    color: white !important;
+    color: $darkgrey !important;
 }
 
 #wpforo #wpforo-wrap #wpforo-title.greyTitle {
@@ -47,4 +55,20 @@
 }
 .wpf-subscribe-topic {
     display: none !important;
+}
+
+#wpforo #wpforo-wrap .wpf-action{
+    color: $mediumgrey !important;
+
+    &:hover{
+        color: $darkgrey !important;
+    }
+}
+
+#wpforo #wpforo-wrap .wpf-action.wpforo-tools{
+    color: white !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-post .wpforo-post-content p{
+    color: $darkgrey !important;
 }
