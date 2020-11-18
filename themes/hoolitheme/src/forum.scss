@@ -23,9 +23,21 @@
     color: $mediumgrey !important;
 }
 
+#wpforo #wpforo-wrap .wpfl-2 .wpforo-category{
+    border-bottom: none !important;
+}
+
+#wpforo #wpforo-wrap p{
+    color: $mediumgrey !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-recent-wrap .wpforo-recent-content.wpfr-topics .wpf-spost-topic-recent-posts{
+    color: $mediumgrey !important;
+}
+
 .wpfl-2 {
     .forum-wrap:not(:first-child) {
-        border-top: 1px solid $grey !important;
+        border-top: 1px solid $lightgrey2 !important;
     }
 }
 
