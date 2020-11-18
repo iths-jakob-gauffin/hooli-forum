@@ -22,18 +22,30 @@ function hooliScripts(){
         wp_enqueue_style('notFrontPageOrCommunity');
     }
 
-    // enqueue styles to hide forum statistics-box most pages, except front-page and profile-pages (profile, account, activity, subscription)
+    // This gets all profile-urls, to then check to show/hide wpforo statistics
     global $wpforo;
-    $wpForoUserObj = $wpforo->menu;
-    $profileObj = array_slice($wpForoUserObj, 7,4);
-    $profileUrls = array();
-    foreach($profileObj as $key){
-        array_push($profileUrls, $key['href']);
-    }
+    $current_user_id = get_current_user_id();
+    $profileUrl = $wpforo->member->get_profile_url( $current_user_id );
+    $truncatedUrl = substr($profileUrl, 0, strpos($profileUrl, "profile")); 
+    $userName = $wpforo->current_object['user']['user_nicename'];
+    $accountUrl = $truncatedUrl . 'account/' . $userName . '/';
+    $activityUrl = $truncatedUrl . 'activity/' . $userName . '/';
+    $subscriptionsUrl = $truncatedUrl . 'subscriptions/' . $userName . '/';
+    $allProfileUrls = [$profileUrl, $accountUrl, $activityUrl, $subscriptionsUrl];
 
     $currentUrl = home_url( add_query_arg( null, null ));
 
-    if(!is_front_page() AND !in_array($currentUrl, $profileUrls)){
+    function checkIfProfileUrl($arrayOfUrls, $currentUrl){
+        foreach ($arrayOfUrls as $url) {
+            if (strpos($currentUrl, $url) !== FALSE) {
+                return true;
+            }
+        };
+        return false;
+
+    };
+
+    if(!is_front_page() AND !checkIfProfileUrl($allProfileUrls, $currentUrl)){
         wp_register_style('hideStatistics', get_template_directory_uri() . '/dist/hideStatistics.css', [], 1, 'all');
         wp_enqueue_style('hideStatistics');
     }
@@ -71,9 +83,6 @@ function hooliScripts(){
 add_action('wp_enqueue_scripts', 'hooliScripts');
 //För att kunna ändra style på login-sidan
 add_action('login_enqueue_scripts', 'hooliScripts');
-
-
-add_action('wp_enqueue_scripts', 'hooliScripts');
 
 function hooliThemeFeatures(){
     register_nav_menu( 'customWpForoMenu', 'Custom Wp Foro Menu' );
