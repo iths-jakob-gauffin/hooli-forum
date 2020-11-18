@@ -1075,6 +1075,20 @@
   padding: 0 10rem;
 }
 
+.main-container .single .author {
+  align-self: flex-start;
+  font-size: 1.3rem;
+  color: #565656;
+}
+
+.main-container .single .lines {
+  align-self: flex-start;
+  background-color: #ff9393;
+  margin: 0 0 3rem 12rem;
+  width: 4rem;
+  height: 0.5rem;
+}
+
 .main-container .single img {
   padding-top: 3rem;
   width: 600px;
@@ -1087,8 +1101,8 @@
 }
 
 .main-container .single h1 {
-  font-size: 3rem;
-  padding: 3rem 12rem;
+  font-size: 4rem;
+  padding: 3rem 12rem 1rem 12rem;
   align-self: flex-start;
 }
 

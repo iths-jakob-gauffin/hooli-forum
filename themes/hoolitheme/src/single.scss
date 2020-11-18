@@ -6,6 +6,20 @@
         padding: 0 10rem;
         // align-items: center;
 
+        .author {
+            align-self: flex-start;
+            font-size: 1.3rem;
+            color: $grey;
+        }
+        
+        .lines {
+            align-self: flex-start;
+            background-color: $mf-pink;
+            margin: 0 0 3rem 12rem;
+            width: 4rem;
+            height: 0.5rem;
+        }
+
         img {
             padding-top: 3rem;
             width: 600px;
@@ -16,8 +30,8 @@
         }
 
         h1 {
-            font-size: 3rem;
-            padding: 3rem 12rem;
+            font-size: 4rem;
+            padding: 3rem 12rem 1rem 12rem;
             align-self: flex-start;
         }
 
