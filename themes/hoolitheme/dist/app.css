@@ -374,8 +374,20 @@
   color: #838383 !important;
 }
 
+#wpforo #wpforo-wrap .wpfl-2 .wpforo-category {
+  border-bottom: none !important;
+}
+
+#wpforo #wpforo-wrap p {
+  color: #838383 !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-recent-wrap .wpforo-recent-content.wpfr-topics .wpf-spost-topic-recent-posts {
+  color: #838383 !important;
+}
+
 .wpfl-2 .forum-wrap:not(:first-child) {
-  border-top: 1px solid #565656 !important;
+  border-top: 1px solid #e6e6e6 !important;
 }
 
 #wpforo-stat-header,
