@@ -1,4 +1,3 @@
-        <?php wp_footer(); ?>
         <div class="main-container">
             <div class="footer">
                 <p>
@@ -9,5 +8,6 @@
                 <p>kontakt@hooli.se  08-35 32 14</p>
             </div>
         </div>
+        <?php wp_footer(); ?>
     </body>
 </html>

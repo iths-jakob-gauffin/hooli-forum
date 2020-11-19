@@ -1654,6 +1654,231 @@
   }
 }
 
+.SingleEvent {
+  overflow: hidden;
+  margin-top: -2rem;
+  position: relative;
+  padding: 3rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.SingleEvent__BackgroundImage {
+  height: 100%;
+  width: 100%;
+  background-position: 50% 60% !important;
+  background-size: cover !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.SingleEvent__BackgroundImage::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+.SingleEvent__ContentWrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 90rem;
+  width: 100%;
+}
+
+.SingleEvent__CategoryWrapper {
+  background-color: #ffffff;
+  padding: 2rem 3rem 0rem;
+}
+
+.SingleEvent__Category {
+  font-family: Varela Round;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2, 5rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.03em;
+  font-size: 3rem;
+  align-self: flex-start;
+  margin-bottom: 1rem;
+}
+
+.SingleEvent__Line {
+  background-color: #88ddae;
+  width: 4rem;
+  height: 0.5rem;
+}
+
+.SingleEvent__TextWrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+.SingleEvent__TextWrapper,
+.SingleEvent__TextWrapper * {
+  transition: all 0.3s ease-in-out;
+}
+
+.SingleEvent__TextWrapper:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.SingleEvent__Inner {
+  flex: 1 1 60%;
+}
+
+.SingleEvent__Artist {
+  font-family: Varela Round;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2, 5rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.03em;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.SingleEvent__Meta * {
+  font-family: Varela Round;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2, 5rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.03em;
+  font-size: 2.5rem;
+}
+
+.SingleEvent__Meta span:not(:first-child) {
+  position: relative;
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+.SingleEvent__Meta span:not(:first-child)::before {
+  content: ".";
+  font-family: Varela Round;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2, 5rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.03em;
+  position: absolute;
+  font-size: 5rem;
+  position: absolute;
+  top: -50%;
+  left: -1.6rem;
+  color: #88ddae;
+}
+
+.SingleEvent__ParagraphWrapper {
+  flex: 1 1 45%;
+  background-color: rgba(136, 221, 174, 0.7);
+  padding: 1rem 1.5rem;
+  cursor: default;
+  margin-right: -3rem;
+}
+
+.SingleEvent__ParagraphWrapper p {
+  font-family: Varela Round;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2, 5rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.03em;
+  font-size: 1.8rem;
+  color: #333333;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 1.25px;
+}
+
+.SingleEvent__TextWrapper:hover .SingleEvent__ParagraphWrapper {
+  background-color: rgba(136, 221, 174, 0.9);
+}
+
+.SingleEvent__MapWrapper {
+  background-color: rgba(246, 246, 246, 0.8);
+  padding: 1rem 5rem 3rem;
+  transition: background 0.3s ease-in-out;
+}
+
+.SingleEvent__MapWrapper:hover {
+  background-color: #f6f6f6;
+}
+
+.SingleEvent .links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 90rem;
+  background-color: #ffffff;
+  padding: 1rem 3rem 2rem;
+  z-index: 50;
+}
+
+.SingleEvent .links a {
+  font-family: Varela Round;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2, 5rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  margin: 0 2rem;
+  font-size: 1.3rem;
+  color: #565656;
+  text-align: center;
+}
+
+.SingleEvent .links a:hover {
+  color: #ff9393;
+}
+
+.SingleEvent__MapText {
+  margin-right: 2rem;
+}
+
+.SingleEvent__MapText * {
+  font-family: Varela Round;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2, 5rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.03em;
+  font-size: 1.5rem;
+}
+
+.SingleEvent__MapText p {
+  margin-bottom: 0.5rem;
+}
+
+.SingleEvent__MapTitle {
+  font-size: 2.3rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.acf-map {
+  width: 100%;
+  height: 350px;
+  border: #ccc solid 1px;
+  margin: 20px 0;
+}
+
+.acf-map img {
+  max-width: inherit !important;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
