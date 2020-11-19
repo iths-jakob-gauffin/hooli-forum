@@ -16,6 +16,9 @@
                     <p class="author">Skriven av <?php echo get_the_author(); ?></p>
                     <div class="lines"></div>
                     <p><?php echo get_the_content(); ?></p>
+                    <div class="img-container">
+                        <img src="<?php the_post_thumbnail_url()?>" alt="">
+                    </div>
                     <div class="links">
                         <a href="<?php echo site_url('/blog');?>">Tillbaka till bloggen</a>
                         <a href="<?php echo site_url('/');?>">Tillbaka till forumet</a>

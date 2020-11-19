@@ -1603,7 +1603,8 @@
   width: 600px;
 }
 
-.main-container .single-container .wp-block-image {
+.main-container .single-container .wp-block-image,
+.main-container .single-container .img-container {
   display: flex;
   justify-content: center;
 }

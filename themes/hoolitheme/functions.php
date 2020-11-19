@@ -59,14 +59,14 @@ function hooliScripts(){
         wp_enqueue_style('removeBreadcrumb');
     }
 
-    if ($url === site_url('community/?foro=signin') || site_url('/iths/hooliforum/community/?foro=signin')) {
+    if ($url === site_url('community/?foro=signin') OR $url === site_url('community/senaste-inlaggen/?foro=signin') OR $url === site_url('/iths/hooliforum/community/?foro=signin') OR $url === site_url('/iths/hooliforum/community/senaste-inlaggen/?foro=signin')) {
         wp_register_script('addTopBorder', get_template_directory_uri() . '/src/addTopBorder.js', ['jquery'], 1, true);
         wp_register_script('editInnerText', get_template_directory_uri() . '/src/editInnerText.js', ['jquery'], 1, true);
         wp_enqueue_script('addTopBorder');
         wp_enqueue_script('editInnerText');
     }
 
-    if ($url === site_url('community/?foro=signup') || site_url('/iths/hooliforum/community/?foro=signup')) {
+    if ($url === site_url('community/?foro=signup') || $url === site_url('community/senaste-inlaggen/?foro=signup') || $url === site_url('/iths/hooliforum/community/?foro=signup') || $url === site_url('/iths/hooliforum/community/senaste-inlaggen/?foro=signup')) {
         wp_register_script('addTopBorder', get_template_directory_uri() . '/src/addTopBorder.js', ['jquery'], 1, true);
         wp_enqueue_script('addTopBorder');
 
