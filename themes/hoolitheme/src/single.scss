@@ -3,7 +3,6 @@
     .single {
         display: flex;
         flex-direction: column;
-        align-items: center;;
 
         .author {
             align-self: flex-start;
@@ -48,6 +47,7 @@
 
         .links {
             display: flex;
+            justify-content: center;
         }
 
         a {
