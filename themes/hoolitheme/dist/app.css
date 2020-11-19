@@ -1691,7 +1691,7 @@
 .SingleEvent__ContentWrapper {
   position: relative;
   z-index: 2;
-  max-width: 90rem;
+  max-width: 110rem;
   width: 100%;
 }
 
@@ -1821,7 +1821,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 90rem;
+  max-width: 110rem;
   background-color: #ffffff;
   padding: 1rem 3rem 2rem;
   z-index: 50;
