@@ -14,8 +14,26 @@
 
 .Header__ImageWrapper {
   position: relative;
-  width: 22rem;
-  height: 11rem;
+  width: 12rem;
+}
+
+@media (min-width: 576px) {
+  .Header__ImageWrapper {
+    width: 15rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .Header__ImageWrapper {
+    width: 15rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .Header__ImageWrapper {
+    width: 22rem;
+    height: 11rem;
+  }
 }
 
 .Header__ImageWrapper a {
@@ -45,6 +63,29 @@
 .Header #menu-wpforo-navigation li,
 .Header #menu-wpforo-menu-logged-in li {
   margin: 0 1rem;
+  font-size: 1.7rem;
+}
+
+.Header #menu-wpforo-navigation li:first-child,
+.Header #menu-wpforo-menu-logged-in li:first-child {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .Header #menu-wpforo-navigation li,
+  .Header #menu-wpforo-menu-logged-in li {
+    font-family: Varela Round;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.9rem;
+    line-height: 2.4rem;
+    letter-spacing: -0.03em;
+  }
+
+  .Header #menu-wpforo-navigation li:first-child,
+  .Header #menu-wpforo-menu-logged-in li:first-child {
+    display: block;
+  }
 }
 
 .Header #menu-wpforo-navigation li a,
@@ -88,10 +129,24 @@
   transition: all 0.2s ease-out;
   width: 10rem;
   color: black;
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .Header__Form .Header__Input {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .Header__Form .Header__Input {
+    display: none;
+  }
 }
 
 @media (min-width: 992px) {
   .Header__Form .Header__Input {
+    display: block;
     width: 11rem;
   }
 }
