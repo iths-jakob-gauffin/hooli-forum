@@ -10,7 +10,8 @@
         
         ?>  
             <div class="main-container">
-                <div class="single">
+                <?php echo get_template_part('/templates/blogNav'); ?>
+                <div class="single-container">
                     <h1><?php $titeln =  get_the_title(); echo $titeln; ?></h1>
                     <p class="author">Skriven av <?php echo get_the_author(); ?></p>
                     <div class="lines"></div>
