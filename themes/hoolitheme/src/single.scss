@@ -1,6 +1,6 @@
 @import "./variables.scss";
 .main-container { 
-    .single {
+    .single-container {
         display: flex;
         flex-direction: column;
 
@@ -20,6 +20,11 @@
         img {
             padding-top: 3rem;
             width: 600px;
+        }
+
+        .wp-block-image {
+            display: flex;
+            justify-content: center;
         }
 
         h1, p, a {
@@ -55,17 +60,21 @@
                 color: $mf-pink;
             }
         }
+
+        nav {
+            max-width: 100%;
+        }
     }
 }
 
 @include md {
-    .single {
-        padding: 0 5rem;
+    .single-container {
+        padding: 0 10rem;
     }
 }
 
 @include lg {
-    .single {
-        padding: 0 10rem;
+    .single-container {
+        padding: 0 20rem;
     }
 }
