@@ -591,7 +591,6 @@
 }
 
 #wpforo #wpforo-wrap .wpforo-profile-wrap .wpf-profile-badge {
-  background-color: #7CC985 !important;
   box-shadow: none !important;
 }
 
@@ -632,8 +631,20 @@
   color: #838383 !important;
 }
 
+#wpforo #wpforo-wrap .wpfl-2 .wpforo-category {
+  border-bottom: none !important;
+}
+
+#wpforo #wpforo-wrap p {
+  color: #838383 !important;
+}
+
+#wpforo #wpforo-wrap .wpforo-recent-wrap .wpforo-recent-content.wpfr-topics .wpf-spost-topic-recent-posts {
+  color: #838383 !important;
+}
+
 .wpfl-2 .forum-wrap:not(:first-child) {
-  border-top: 1px solid #565656 !important;
+  border-top: 1px solid #e6e6e6 !important;
 }
 
 #wpforo-stat-header,
@@ -697,7 +708,7 @@
   align-items: center;
   justify-content: space-between;
   max-width: 98rem;
-  height: 8rem;
+  height: 6rem;
   margin-bottom: 2rem;
 }
 
@@ -719,15 +730,11 @@
   display: flex;
   align-items: center;
   position: relative;
-  padding: 0 0.5rem;
-}
-
-.Blog__NavItem:not(:last-child) {
-  margin-right: 2rem;
+  padding: 0 0.8rem;
 }
 
 .Blog__NavItem:hover {
-  background-color: #000000;
+  background-color: #333333;
 }
 
 .Blog__NavLink {
@@ -740,8 +747,7 @@
 
 .Blog__NavLinkText {
   text-decoration: none;
-  color: #333333;
-  text-transform: uppercase;
+  color: white;
   display: block;
 }
 
@@ -768,10 +774,10 @@
   font-size: 2, 5rem;
   line-height: 2.4rem;
   letter-spacing: -0.03em;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: #333333;
+  color: white;
 }
 
 .Blog__Text {
@@ -936,7 +942,7 @@
   font-size: 2, 5rem;
   line-height: 2.4rem;
   letter-spacing: -0.03em;
-  font-size: 2.5rem;
+  font-size: 1.9rem;
   text-transform: uppercase;
 }
 
