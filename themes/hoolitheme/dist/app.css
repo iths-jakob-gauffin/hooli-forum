@@ -737,6 +737,10 @@
   background-color: #333333;
 }
 
+.Blog__NavItem--Selected {
+  background-color: #333333;
+}
+
 .Blog__NavLink {
   position: absolute;
   height: 100%;
@@ -764,6 +768,26 @@
 }
 
 .Blog__NavItem:hover .Blog__NavLinkText--Blue {
+  color: #7cc9fb;
+}
+
+.Blog__NavLinkText--PinkSelected {
+  background-color: #333333;
+  color: #ff9393;
+}
+
+.Blog__NavLinkText--GreenSelected {
+  background-color: #333333;
+  color: #88ddae;
+}
+
+.Blog__NavLinkText--YellowSelected {
+  background-color: #333333;
+  color: #fff238;
+}
+
+.Blog__NavLinkText--BlueSelected {
+  background-color: #333333;
   color: #7cc9fb;
 }
 

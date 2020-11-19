@@ -71,9 +71,7 @@ function hooliScripts(){
         wp_register_script('addTopBorder', get_template_directory_uri() . '/src/addTopBorder.js', ['jquery'], 1, true);
         wp_register_script('addPlaceholder', get_template_directory_uri() . '/src/addPlaceholder.js', ['jquery'], 1, true);
         wp_enqueue_script('addTopBorder');
-
     }
-
 }
  
 add_action('wp_enqueue_scripts', 'hooliScripts');

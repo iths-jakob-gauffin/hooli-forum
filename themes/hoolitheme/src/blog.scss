@@ -43,6 +43,10 @@
         &:hover{
             background-color: $darkgrey;
         }
+
+        &--Selected {
+            background-color: $darkgrey;
+        }
     }
 
     &__NavLink{
@@ -72,6 +76,23 @@
             &--Blue{
                 color: $mf-blue;
             }
+        }
+
+        &--PinkSelected {
+            background-color: $darkgrey;
+            color: $mf-pink;
+        }
+        &--GreenSelected {
+            background-color: $darkgrey;
+            color: $mf-green;
+        }
+        &--YellowSelected {
+            background-color: $darkgrey;
+            color: $mf-yellow;
+        }
+        &--BlueSelected {
+            background-color: $darkgrey;
+            color: $mf-blue;
         }
     }
 
