@@ -11,8 +11,18 @@
 
     &__ImageWrapper {
         position: relative;
-        width: 22rem;
-        height: 11rem;
+        width: 12rem;
+
+        @include sm{
+            width: 15rem
+        }
+        @include md{
+            width: 15rem
+        }
+        @include lg{
+            width: 22rem;
+            height: 11rem;
+        }
 
         a {
             position: absolute;
@@ -36,8 +46,21 @@
         justify-content: center;
         list-style: none;
 
+        
         li {
             margin: 0 1rem;
+            font-size: 1.7rem;
+
+            &:first-child{
+                display: none;
+            }
+
+            @include md{
+                &:first-child{
+                    display: block;
+                }
+                @include navText;
+            }
 
             a {
                 text-align: center;
@@ -78,8 +101,16 @@
             transition: all 0.2s ease-out;
             width: 10rem;
             color: black;
+            display: none;
 
+            @include sm{
+                display: none;
+            }
+            @include md{
+                display: none;
+            }
             @include lg {
+                display: block;
                 width: 11rem;
             }
 
