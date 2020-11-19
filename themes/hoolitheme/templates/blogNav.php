@@ -1,8 +1,3 @@
-<?php
-    $urlArr = explode("/", $_SERVER['REQUEST_URI']);
-    $active_class = array_pop($urlArr); 
-?>
-
 <nav class="Blog__Nav">
     <a href="<?php echo esc_url(site_url('/blog')); ?>" class="Blog__Title">Bloggen</a>
     <ul class="Blog__NavList">
