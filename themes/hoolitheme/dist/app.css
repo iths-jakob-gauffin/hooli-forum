@@ -1328,7 +1328,7 @@
   padding: 7px 12px !important;
 }
 
-.wpforo-login-wrap .top-border p {
+.wpforo-login-wrap .top-border .top-border-text {
   color: white !important;
   font-size: 14px !important;
   padding: 5px 0 !important;
@@ -1374,7 +1374,7 @@
   padding: 7px 12px !important;
 }
 
-.wpforo-register-wrap .top-border p {
+.wpforo-register-wrap .top-border .top-border-text {
   color: white !important;
   font-size: 14px !important;
   padding: 5px 0 !important;
