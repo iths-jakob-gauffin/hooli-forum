@@ -1,5 +1,4 @@
 .Blog {
-
     $root: &;
 
     &__Aside {
@@ -7,33 +6,33 @@
         overflow: hidden;
     }
 
-    &__AsideEvents{
+    &__AsideEvents {
         margin-bottom: 4rem;
     }
 
-    &__AsideTitleWrapper{
+    &__AsideTitleWrapper {
         background-color: $darkgrey;
         padding: 1.2rem;
         height: 6rem;
         display: flex;
         align-items: flex-end;
-        margin-bottom: .9rem;
+        margin-bottom: 0.9rem;
     }
 
-    &__AsideTitle{
+    &__AsideTitle {
         @include h1;
         font-size: 2.5rem;
         text-transform: uppercase;
-        
-        &--Green{
+
+        &--Green {
             color: $mf-green;
         }
 
-        &--Yellow{
+        &--Yellow {
             color: $mf-yellow;
         }
 
-        &--Blue{
+        &--Blue {
             color: $mf-blue;
         }
     }
@@ -46,7 +45,7 @@
         align-items: flex-end;
 
         #{$root}__AsideEventItem {
-            width: 85%;
+            width: 95%;
             height: 13rem;
             position: relative;
             margin-right: -2rem;
@@ -57,10 +56,10 @@
             overflow: hidden;
             background-size: cover !important;
             background-repeat: no-repeat;
-            margin-bottom: .9rem;
-            transition: transform .2s ease-in-out;
+            margin-bottom: 0.9rem;
+            transition: transform 0.2s ease-in-out;
 
-            &:hover{
+            &:hover {
                 transform: translateX(-2rem);
             }
 
@@ -99,7 +98,8 @@
                     left: 0;
                     z-index: 1;
                     transform: translate(0, 1rem);
-                    transition: transform 0.2s ease-in-out, background .2s ease-in-out;
+                    transition: transform 0.2s ease-in-out,
+                        background 0.2s ease-in-out;
                 }
 
                 #{$root}__Date {
@@ -117,9 +117,9 @@
                     text-transform: uppercase;
                 }
             }
-            
-            #{$root}__EventNameWrapper{
-                padding: .8rem;
+
+            #{$root}__EventNameWrapper {
+                padding: 0.8rem;
                 padding-right: 2.8rem;
                 align-self: flex-end;
                 @include bgColorOpacity($white, 0.8);
@@ -140,10 +140,10 @@
             #{$root}__DateContainer::after {
                 transform: translate(0, -2rem);
                 background: linear-gradient(
-                        to top,
-                        rgb(136, 221, 174) 40%,
-                        transparent
-                    );
+                    to top,
+                    rgb(136, 221, 174) 40%,
+                    transparent
+                );
             }
         }
     }

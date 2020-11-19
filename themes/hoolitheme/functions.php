@@ -17,37 +17,41 @@ function hooliScripts(){
     // Add extra css on certain pages to remove unwanted breadcrumbs and title in wpForo    
     $url = home_url( add_query_arg( null, null ));
 
-    if(is_front_page() OR $url === site_url('community/') ){
-        wp_register_style('notFrontPageOrCommunity', get_template_directory_uri() . '/dist/notFrontPageOrCommunity.css', [], 1, 'all');
-        wp_enqueue_style('notFrontPageOrCommunity');
+    if(is_front_page() OR $url === site_url('community/') OR $url === site_url('community/senaste-inlaggen/')){
+        wp_register_style('notFrontPageOrCommunityOrSenasteInlagg', get_template_directory_uri() . '/dist/notFrontPageOrCommunityOrSenasteInlagg.css', [], 1, 'all');
+        wp_enqueue_style('notFrontPageOrCommunityOrSenasteInlagg');
+
     }
 
-    // This gets all profile-urls, to then check to show/hide wpforo statistics
+    // These commands gets all profile-urls, to then check to show/hide wpforo statistics and breadcrumb
     global $wpforo;
     $current_user_id = get_current_user_id();
-    $profileUrl = $wpforo->member->get_profile_url( $current_user_id );
-    $truncatedUrl = substr($profileUrl, 0, strpos($profileUrl, "profile")); 
-    $userName = $wpforo->current_object['user']['user_nicename'];
-    $accountUrl = $truncatedUrl . 'account/' . $userName . '/';
-    $activityUrl = $truncatedUrl . 'activity/' . $userName . '/';
-    $subscriptionsUrl = $truncatedUrl . 'subscriptions/' . $userName . '/';
+    $profileUrlWithUsername = $wpforo->member->get_profile_url( $current_user_id );
+    $truncatedUrl = substr($profileUrl, 0, strpos($profileUrlWithUsername, "profile")); 
+    $profileUrl = $truncatedUrl . 'profile/';
+    $accountUrl = $truncatedUrl . 'account/';
+    $activityUrl = $truncatedUrl . 'activity/';
+    $subscriptionsUrl = $truncatedUrl . 'subscriptions/';
     $allProfileUrls = [$profileUrl, $accountUrl, $activityUrl, $subscriptionsUrl];
 
     $currentUrl = home_url( add_query_arg( null, null ));
 
     function checkIfProfileUrl($arrayOfUrls, $currentUrl){
         foreach ($arrayOfUrls as $url) {
-            if (strpos($currentUrl, $url) !== FALSE) {
+            if(strpos($currentUrl, $url) !== false){
                 return true;
             }
         };
         return false;
-
     };
 
+    //Om det inte är frontpage OCH om currentUrl inte är en av profilsidorna
     if(!is_front_page() AND !checkIfProfileUrl($allProfileUrls, $currentUrl)){
         wp_register_style('hideStatistics', get_template_directory_uri() . '/dist/hideStatistics.css', [], 1, 'all');
         wp_enqueue_style('hideStatistics');
+    } else{
+        wp_register_style('removeBreadcrumb', get_template_directory_uri() . '/dist/removeBreadcrumb.css', [], 1, 'all');
+        wp_enqueue_style('removeBreadcrumb');
     }
 
     if ($url === site_url('community/?foro=signin')) {
@@ -86,6 +90,7 @@ function hooliThemeFeatures(){
     add_image_size( 'blogPresentation', 711, 470, true );
     add_image_size( 'asideEvent', 250, 90, true );
     add_image_size( 'asideReview', 100, 100, true );
+    add_image_size( 'blogBackgroundImage', 959, 300, true );
 
 }
 
@@ -119,4 +124,31 @@ function redirectToFrontend(){
 }
 add_action('admin_init', 'redirectToFrontend');
 
+
+    //ladda bara in de kommande postsen med kategori "Intervju" i page-interjuer.php:
+    function queryPostsGetter($query){
+        if(is_post_type_archive('post') AND $query->is_main_query()){
+            $query->set('posts_per_page', -1);
+            $query->set('orderby', 'title');
+            $query->set('order', 'ASC');
+        }
+
+        if(!is_admin() AND is_post_type_archive('event') AND $query->is_main_query()){
+            $today = date('Ymd');
+            $query->set('posts_per_page', -1);
+            $query->set('meta_key', 'event_date');
+            $query->set('orderby', 'meta_value_num');
+            $query->set('order', 'ASC');
+            $query->set('meta_query', array(
+                array(
+                    'key' => 'event_date',
+                    'compare' => '>=',
+                    'value' => $today,
+                    'type' => 'numeric'
+                )
+            ));
+        }
+    }
+
+    add_action('pre_get_posts', 'queryPostsGetter');
 

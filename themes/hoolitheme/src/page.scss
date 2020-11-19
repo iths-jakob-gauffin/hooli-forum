@@ -1,7 +1,7 @@
-.Page{
+.Archive {
     display: flex;
 
-    &__Main{
+    &__Main {
         flex: 1 1 70%;
         padding-right: 2rem;
     }
@@ -10,11 +10,12 @@
         flex: 1 1 30%;
     }
 
-    &__Article{
+    &__Section {
         position: relative;
+        padding: 8rem 10rem;
     }
 
-    &__BackgroundImage{
+    &__BackgroundImage {
         position: absolute;
         top: -2rem;
         left: 0;
@@ -22,9 +23,9 @@
         padding-top: 30rem;
         width: 100%;
         background-size: cover !important;
-        background-position: 50% 40% !important;
+        // background-position: 50% 40% !important;
 
-        &::after{
+        &::after {
             content: "";
             position: absolute;
             top: 0;
@@ -34,12 +35,185 @@
             width: 100%;
             height: 100%;
             z-index: 1;
-            @include bgColorOpacity($white, .7);
-
-
+            @include bgColorOpacity($white, 0.7);
         }
-        // clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 90%, 0% 100%);
-        // clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-        // clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 75% 80%, 50% 70%, 25% 80%, 0% 100%);
+    }
+
+    &__Title {
+        @include h1;
+        font-size: 4rem;
+        position: relative;
+        margin-bottom: 4rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -2rem;
+            left: 0;
+            width: 5rem;
+            height: 5px;
+            background-color: $mf-pink;
+        }
+
+        &--Blue::after {
+            background-color: $mf-blue;
+        }
+
+        &--Yellow::after {
+            background-color: $mf-yellow;
+        }
+
+        &--Green::after {
+            background-color: $mf-green;
+        }
+    }
+
+    &__Subtitle {
+        @include h1;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    &__ListItem {
+        background-color: $lightgrey;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border-top: 3px solid $mf-pink;
+        transition: all 0.3s ease-in-out;
+        margin-bottom: 2rem;
+
+        &--Blue {
+            border-top: 3px solid $mf-blue;
+        }
+
+        &--Yellow {
+            border-top: 3px solid $mf-yellow;
+        }
+
+        &--Green {
+            border-top: 3px solid $mf-green;
+        }
+
+        &:hover {
+            background-color: $white;
+        }
+    }
+
+    &__ArticleLink {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__Article {
+        padding: 1.5rem 3rem 0rem;
+    }
+
+    &__ArticlePerson {
+        @include h1;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__ArrowWrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__ArticleTitle {
+        @include h1;
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+    }
+    &__Meta {
+        margin-bottom: 1.5rem;
+    }
+
+    &__Author,
+    &__Date {
+        @include h1;
+        font-size: 1.2rem;
+    }
+
+    &__Preamble {
+        @include h1;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+
+        &--ExtraMargin {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__CategoryWrapper {
+        display: flex;
+        align-items: center;
+        background-color: $mf-yellow;
+        margin-left: -3rem;
+        margin-right: -3rem;
+        padding: 0.5rem 3rem;
+
+        &--Green {
+            background-color: $mf-green;
+            padding: 2rem 3rem;
+            color: $white;
+        }
+    }
+
+    &__Location,
+    &__EventDate,
+    &__Time {
+        @include h1;
+        font-size: 3rem;
+    }
+
+    &__Location {
+        margin-right: 2rem;
+    }
+
+    &__CategoryTitle {
+        @include h1;
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+
+    &__CategoryList {
+        list-style: none;
+        display: flex;
+    }
+
+    &__CategoryItem {
+        @include h1;
+        font-size: 1.6rem;
+        margin-left: 1rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        position: relative;
+        margin-right: 1.3rem;
+
+        &:not(:first-child)::before {
+            content: "/";
+            position: absolute;
+            top: 0;
+            left: -1.5rem;
+        }
+    }
+
+    &__Arrow {
+        position: absolute;
+        right: 3.5rem;
+        top: 1.5rem;
+        transition: transform 0.3s ease-in-out;
+        i {
+            font-size: 4rem;
+        }
+
+        .Archive__ListItem:hover & {
+            transform: translate(2rem, 0);
+        }
     }
 }

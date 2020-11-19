@@ -9,7 +9,6 @@
 <body <?php body_class(); ?> >
     <div class="main-container">
         <header class="Header">
-            
             <div class="Header__ImageWrapper">
                 <a href="<?php echo site_url('/')?>" title="Tillbaka till startsidan"></a>
                 <img src="<?php echo get_theme_file_uri('/dist/images/Musikfolk.svg'); ?>" alt="Musikfolk logotype" class="Header__Image">
@@ -42,7 +41,7 @@
                         <i class="fas fa-user Header__Icon" aria="hidden"></i>
                     </a>
 
-                    <a href="<?php echo wp_logout_url("/"); ?>" class="Header__IconLink" title="Logga ut">
+                    <a href="<?php echo wp_logout_url(get_home_url()); ?>" class="Header__IconLink" title="Logga ut">
                         <i class="fas fa-sign-out-alt Header__Icon" aria="hidden"></i>
                     </a>
                     

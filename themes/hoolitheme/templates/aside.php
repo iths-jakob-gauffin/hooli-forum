@@ -92,7 +92,7 @@
                 <div class="Aside__ReviewTextWrapper">
                   <div class="Aside__TopWrapper">
                     <h3 class="Aside__ReviewAuthor"><?php echo get_field('review_author'); ?></h3>
-                    <span class="Aside__EventExcerpt"><?php echo wp_trim_words(get_the_excerpt(), 13, '..."');?></span>
+                    <span class="Aside__EventExcerpt"><?php echo wp_trim_words(get_the_excerpt(), 10, '...');?></span>
                   </div>
                   <div class="Aside__BottomWrapper">
                     <ul class="Aside__ReviewCategoryList">
@@ -131,7 +131,7 @@
       foreach($newsPosts as $news){
       ?>
         <li class="Aside__NewsItem">
-          <a href="<?php the_permalink(); ?>" class="Aside__NewsLink"></a>
+            <a href="<?php the_permalink($news->ID); ?>" class="Aside__NewsLink"></a>
           <div class="Aside__NewsTextWrapper">
             <h4 class="Aside__NewsTitle"><?php echo $news->post_title; ?></h4>        
             <div class="Aside__NewsPreamble">
