@@ -9,11 +9,13 @@
             <div class="main-container">
                 <?php echo get_template_part('/templates/blogNav'); ?>
                 <div class="SingleEvent">
-                        <div class="SingleEvent__BackgroundImage" style="background: url(<?php  echo get_field('background_image')['url']; ?>)"></div>
+                        <div class="SingleEvent__BackgroundImage" style="background: url(<?php  echo get_field('background_image')['sizes']['singleEventBackgroundImage']; ?>)"></div>
                         
                         <div class="SingleEvent__ContentWrapper">
                             <div class="SingleEvent__CategoryWrapper">
-                                <h3 class="SingleEvent__Category"><?php echo get_the_category()[0]->name; ?></h3>
+                                <h3 class="SingleEvent__Category"><?php 
+                                
+                                echo get_the_category()[0]->name; ?></h3>
                                 <div class="SingleEvent__Line"></div>
                             </div>
 

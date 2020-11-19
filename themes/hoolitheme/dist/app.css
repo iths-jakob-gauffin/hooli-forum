@@ -1669,7 +1669,7 @@
 .SingleEvent__BackgroundImage {
   height: 100%;
   width: 100%;
-  background-position: 50% 60% !important;
+  background-position: 50% 50% !important;
   background-size: cover !important;
   position: absolute;
   top: 0;

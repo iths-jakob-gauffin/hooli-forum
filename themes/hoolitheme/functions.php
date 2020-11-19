@@ -94,6 +94,7 @@ function hooliThemeFeatures(){
     add_image_size( 'asideEvent', 250, 90, true );
     add_image_size( 'asideReview', 100, 100, true );
     add_image_size( 'blogBackgroundImage', 959, 300, true );
+    add_image_size( 'singleEventBackgroundImage', 1024, 768, true );
 
 }
 
