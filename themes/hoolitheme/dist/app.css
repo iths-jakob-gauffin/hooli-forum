@@ -1497,6 +1497,10 @@
   z-index: 1;
 }
 
+.main-container nav {
+  max-width: 100%;
+}
+
 .main-container .single-container {
   display: flex;
   flex-direction: column;
@@ -1557,10 +1561,6 @@
 
 .main-container .single-container a:hover {
   color: #ff9393;
-}
-
-.main-container .single-container nav {
-  max-width: 100%;
 }
 
 @media (min-width: 768px) {
