@@ -37,7 +37,9 @@ get_header();
                     <li class="Archive__ListItem Archive__ListItem--Blue">
                         <a href="<?php the_permalink(); ?>" class="Archive__ArticleLink"></a>
                         <article class="Archive__Article">
-                            <h3 class="Archive__ArticlePerson">Intervju med <?php echo get_field('person_subject'); ?></h3>
+                            <h3 class="Archive__ArticlePerson"><?php 
+                            $category = get_the_category()[0];
+                            echo $category->name; ?></h3>
                                 <h4 class="Archive__ArticleTitle">
                                     <?php the_title(); ?>
                                 </h4>
