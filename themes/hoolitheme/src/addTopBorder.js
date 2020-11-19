@@ -5,9 +5,10 @@ const addTopBorder = (elementToPick, text) => {
     const div = form.insertBefore(document.createElement("div"), form.firstChild);
     div.classList.add("top-border");
 
-    const p = document.createElement("p");
-    p.innerText = text;
-    div.append(p);
+    const h3 = document.createElement("h3");
+    h3.innerText = text;
+    h3.classList.add("top-border-text");
+    div.append(h3);
 
 }
 
