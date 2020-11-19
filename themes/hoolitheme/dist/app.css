@@ -1072,7 +1072,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 10rem;
 }
 
 .main-container .single .author {
@@ -1084,7 +1083,6 @@
 .main-container .single .lines {
   align-self: flex-start;
   background-color: #ff9393;
-  margin: 0 0 3rem 12rem;
   width: 4rem;
   height: 0.5rem;
 }
@@ -1102,14 +1100,13 @@
 
 .main-container .single h1 {
   font-size: 4rem;
-  padding: 3rem 12rem 1rem 12rem;
+  padding-top: 3rem;
   align-self: flex-start;
 }
 
 .main-container .single p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  padding: 0 12rem;
 }
 
 .main-container .single a {
@@ -1117,10 +1114,27 @@
   margin: 0 2rem;
   font-size: 1.3rem;
   color: #565656;
+  text-align: center;
+}
+
+.main-container .single .links {
+  display: flex;
 }
 
 .main-container .single a:hover {
   color: #ff9393;
+}
+
+@media (min-width: 768px) {
+  .single {
+    padding: 0 5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .single {
+    padding: 0 10rem;
+  }
 }
 
 * {

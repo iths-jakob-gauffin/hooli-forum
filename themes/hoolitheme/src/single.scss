@@ -1,10 +1,9 @@
+@import "./variables.scss";
 .main-container { 
     .single {
         display: flex;
         flex-direction: column;
         align-items: center;;
-        padding: 0 10rem;
-        // align-items: center;
 
         .author {
             align-self: flex-start;
@@ -15,7 +14,6 @@
         .lines {
             align-self: flex-start;
             background-color: $mf-pink;
-            margin: 0 0 3rem 12rem;
             width: 4rem;
             height: 0.5rem;
         }
@@ -31,14 +29,13 @@
 
         h1 {
             font-size: 4rem;
-            padding: 3rem 12rem 1rem 12rem;
+            padding-top: 3rem;
             align-self: flex-start;
         }
 
         p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
-            padding: 0 12rem;
         }
 
         a {
@@ -46,10 +43,29 @@
             margin: 0 2rem;
             font-size: 1.3rem;
             color: $grey;
+            text-align: center;
         }
 
-        a:hover {
-            color: $mf-pink;
+        .links {
+            display: flex;
         }
+
+        a {
+            &:hover {
+                color: $mf-pink;
+            }
+        }
+    }
+}
+
+@include md {
+    .single {
+        padding: 0 5rem;
+    }
+}
+
+@include lg {
+    .single {
+        padding: 0 10rem;
     }
 }
