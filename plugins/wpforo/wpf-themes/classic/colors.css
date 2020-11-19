@@ -725,9 +725,14 @@ body.wpf-dark #wpf-msg-box a:hover, body.wpf-dark #wpf-msg-box a:active{color:#F
 #wpforo #wpforo-wrap.wpf-dark .wpf-acp-footer a.wpf-button-secondary {background: #777;color: #fff;}
 #wpforo #wpforo-wrap.wpf-dark .wpf-acp-footer a.wpf-button-secondary:last-child{color: #fff!important; background: #e22d00;}
 
-#wpforo #wpforo-wrap {
-   font-size: 13px; width: 100%; padding:10px 0; margin:0px;
-   font-family: "Varela Round", Varela, sans-serif !important;
-   font-weight: 400;
-   letter-spacing: 0.5px;
-}
+#wpforo #wpforo-wrap {​​​​​​
+
+    font-size: 13px; width: 100%; padding:10px 0; margin:0px;
+
+    font-family: "Varela Round", Varela, sans-serif !important;
+
+    font-weight: 400;
+
+    letter-spacing: 0.5px;
+
+ }​​​​​​
