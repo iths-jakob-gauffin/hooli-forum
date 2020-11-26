@@ -178,18 +178,8 @@ var RenameRecentPosts = /*#__PURE__*/function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-__webpack_require__(/*! /Users/linuskallin/Sites/wp-forum/wp-content/themes/hoolitheme/src/app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! /Users/linuskallin/Sites/wp-forum/wp-content/themes/hoolitheme/src/app.scss */"./src/app.scss");
-=======
 __webpack_require__(/*! /Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/src/app.js */"./src/app.js");
 module.exports = __webpack_require__(/*! /Users/jessica/Local Sites/hooliforum/app/public/wp-content/themes/hoolitheme/src/app.scss */"./src/app.scss");
->>>>>>> 51f57bed54929982bacf6773f1face7275a68a1c
-=======
-__webpack_require__(/*! /Users/linuskallin/Sites/wp-forum/wp-content/themes/hoolitheme/src/app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! /Users/linuskallin/Sites/wp-forum/wp-content/themes/hoolitheme/src/app.scss */"./src/app.scss");
->>>>>>> linus
 
 
 /***/ })
