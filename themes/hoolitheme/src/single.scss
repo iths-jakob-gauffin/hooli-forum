@@ -1,5 +1,5 @@
 @import "./variables.scss";
-.main-container { 
+.main-container {
     nav {
         max-width: 100%;
     }
@@ -12,7 +12,7 @@
             font-size: 1.3rem;
             color: $grey;
         }
-        
+
         .lines {
             align-self: flex-start;
             background-color: $mf-pink;
@@ -25,13 +25,16 @@
             width: 600px;
         }
 
-        .wp-block-image {
+        .wp-block-image,
+        .img-container {
             display: flex;
             justify-content: center;
         }
 
-        h1, p, a {
-            font-family: 'varela round';
+        h1,
+        p,
+        a {
+            font-family: "varela round";
         }
 
         h1 {

@@ -4,6 +4,8 @@ function hooliScripts(){
     //fonts
     wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Varela+Round&display=swap', false);
 
+
+
     //font-awesome
     wp_enqueue_style('fontawesome5', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css', array(), null );
 
@@ -13,6 +15,9 @@ function hooliScripts(){
     wp_enqueue_script('jquery');
     wp_register_script('app', get_template_directory_uri() . '/dist/app.js', ['jquery'], 1, true);
     wp_enqueue_script('app');
+
+    //maps
+    wp_enqueue_script('googleMap', '//maps.googleapis.com/maps/api/js?key=AIzaSyBwDr8vH_NUbKigHt0TFX0Ezvq230Q6a5s', NULL, '1.0', true);
 
     // Add extra css on certain pages to remove unwanted breadcrumbs and title in wpForo    
     $url = home_url( add_query_arg( null, null ));
@@ -54,14 +59,14 @@ function hooliScripts(){
         wp_enqueue_style('removeBreadcrumb');
     }
 
-    if ($url === site_url('community/?foro=signin') || site_url('/iths/hooliforum/community/?foro=signin')) {
+    if ($url === site_url('community/?foro=signin') OR $url === site_url('community/senaste-inlaggen/?foro=signin') OR $url === site_url('/iths/hooliforum/community/?foro=signin') OR $url === site_url('/iths/hooliforum/community/senaste-inlaggen/?foro=signin')) {
         wp_register_script('addTopBorder', get_template_directory_uri() . '/src/addTopBorder.js', ['jquery'], 1, true);
         wp_register_script('editInnerText', get_template_directory_uri() . '/src/editInnerText.js', ['jquery'], 1, true);
         wp_enqueue_script('addTopBorder');
         wp_enqueue_script('editInnerText');
     }
 
-    if ($url === site_url('community/?foro=signup') || site_url('/iths/hooliforum/community/?foro=signup')) {
+    if ($url === site_url('community/?foro=signup') || $url === site_url('community/senaste-inlaggen/?foro=signup') || $url === site_url('/iths/hooliforum/community/?foro=signup') || $url === site_url('/iths/hooliforum/community/senaste-inlaggen/?foro=signup')) {
         wp_register_script('addTopBorder', get_template_directory_uri() . '/src/addTopBorder.js', ['jquery'], 1, true);
         wp_enqueue_script('addTopBorder');
 
@@ -89,6 +94,7 @@ function hooliThemeFeatures(){
     add_image_size( 'asideEvent', 250, 90, true );
     add_image_size( 'asideReview', 100, 100, true );
     add_image_size( 'blogBackgroundImage', 959, 300, true );
+    add_image_size( 'singleEventBackgroundImage', 1024, 768, true );
 
 }
 
@@ -149,4 +155,10 @@ add_action('admin_init', 'redirectToFrontend');
     }
 
     add_action('pre_get_posts', 'queryPostsGetter');
+
+    function hooliMapKey(){
+        acf_update_setting('google_api_key', 'AIzaSyBwDr8vH_NUbKigHt0TFX0Ezvq230Q6a5s');
+    }
+    
+    add_filter('acf/init', 'hooliMapKey');
 

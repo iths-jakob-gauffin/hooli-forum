@@ -22,8 +22,6 @@
             <?php 
             while(have_posts()){
                 the_post();
-                global $post; 
-                echo var_dump($post);
                 ?>
                     <li class="Page__ListItem">
                         <a href="" class="Page__ArticleLink"></a>
