@@ -16,7 +16,10 @@
           </div>
 
         <h1 class="Page__Title"><?php the_title(); ?></h1>
-        <p class="Page__Subtitle"><?php echo get_field('subtitle'); ?>Här hittar du alla intervjuer</p>
+        <p class="Page__Subtitle">
+            <?php 
+            // echo var_dump($bgImage); 
+            echo get_field('subtitle'); ?>Här hittar du alla intervjuer</p>
 
         <ul class="Page__List">
             <?php 

@@ -1,4 +1,5 @@
 <aside class="Blog__Aside">
+<button id="testKlick">klicka</button>
   <section class="Blog__AsideEvents">
     <div class="Blog__AsideTitleWrapper">
       <h2 class="Blog__AsideTitle Blog__AsideTitle--Green">Kommande events</h2>

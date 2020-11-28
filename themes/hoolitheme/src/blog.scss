@@ -7,7 +7,8 @@
         padding-right: 2rem;
     }
 
-    &__Nav{
+    &__Nav {
+        $navWidth: 100%;
         background-color: $mf-pink;
         padding: 0 4rem;
         display: flex;
@@ -16,17 +17,120 @@
         max-width: 98rem;
         height: 6rem;
         margin-bottom: 2rem;
-
+        position: relative;
+        overflow: hidden;
     }
 
-    &__NavList{
+    &__NavList {
         display: flex;
         align-items: center;
         list-style: none;
         height: 100%;
     }
 
-    &__NavItem{
+    #blogSearchButton {
+        transform: translateX(0);
+        transition: transform 0.5s ease-in-out;
+        position: relative;
+        z-index: 10;
+    }
+
+    .hoverState--hidden {
+        width: 100%;
+        height: 100%;
+        background-color: none;
+    }
+
+    .hoverState {
+        background-color: $darkgrey;
+    }
+
+    #blogSearchButton.active {
+        // border: 1px solid red;
+        position: relative;
+        transform: translateX(-45rem);
+
+        &::before {
+            background-color: none !important;
+        }
+    }
+
+    #blogSearchButton--Pink {
+        border: 1px solid white;
+        // transform: scale(1);
+        position: relative;
+        i {
+            color: $mf-pink !important;
+        }
+    }
+
+    #blogSearchButton--Pink.hidden {
+        // visibility: hidden;
+        // transform: scale(0);
+        position: absolute;
+    }
+
+    &__SearchForm {
+        right: 0;
+        position: absolute;
+        z-index: 10;
+        transform: translateX(-25rem);
+        transition: transform 0.5s ease-in-out;
+        // width: 100%;
+        border: 1px solid yellow;
+
+        // position: absolute;
+        // top: 0;
+        &--hidden {
+            transform: translateX(100%);
+        }
+    }
+
+    &__SearchInput {
+        @include h1;
+        @include bgColorOpacity($white, 0.9);
+        color: $darkgrey;
+        font-size: 1.8rem;
+        padding: 0.5rem 1.2rem;
+        border: none;
+        border-radius: 0.5rem;
+        outline: none;
+        min-width: 100%;
+    }
+
+    &__NavOverlay {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        // @include bgColorOpacity($black, 0.8);
+        background: linear-gradient(
+            to right,
+            transparent 15%,
+            rgba(0, 0, 0, 0.8) 45%,
+            rgba(0, 0, 0, 1) 70%
+        );
+        visibility: visible;
+        opacity: 1;
+        // transform: scale(1);
+        transform: translateX(0%);
+        transition: all 0.5s ease-in-out;
+        // width: 100%;
+
+        &--hidden {
+            opacity: 0;
+            transform: translateX(calc(100% - 4rem));
+            // height: 100%;
+            // width: 0;
+            // border: 1px solid red;
+            // visibility: hidden;
+            // z-index: -1;q
+        }
+    }
+
+    &__NavItem {
         @include navText;
         height: 100%;
         display: flex;
@@ -40,16 +144,93 @@
         //     margin-right: 1rem;
         // }
 
-        &:hover{
+        &:hover {
             background-color: $darkgrey;
         }
 
         &--Selected {
             background-color: $darkgrey;
         }
+
+        &--Search {
+            cursor: pointer;
+            padding: 0 2rem;
+            @include navText;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            // &::before {
+            //     content: "";
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     position: absolute;
+            //     background-color: $darkgrey;
+            //     opacity: 0;
+            //     z-index: -1;
+            // }
+
+            // &:hover:before {
+            //     opacity: 1;
+            // }
+        }
+
+        // .move {
+        //     transform: translateX(-35rem);
+        // }
+
+        &--Search.clicked::before {
+            opacity: 1;
+            // border: 1px solid red;
+            transition: all 0.5s ease-in;
+        }
+
+        &--Search.clicked {
+            position: relative;
+            z-index: -1;
+            opacity: 0;
+            // border: 1px solid red;
+            transition: all 0.5s ease-in;
+            // background-color: $mf-pink;
+        }
+
+        .gray {
+            background-color: $darkgrey;
+        }
+
+        // &--HoverHidden:hover {
+        //     background-color: none;
+        // }
+
+        // &--HoverHidden:hover {
+        //     background: transparent;
+        // }
     }
 
-    &__NavLink{
+    &__FadeHover {
+        background-color: transparent;
+        // border: 1px solid red;
+        transition: all 2.5s ease-in-out;
+
+        &--Active {
+            background-color: $darkgrey;
+            // border: 1px solid white;
+            // transition: all 0.3s ease-in-out;
+
+            &--Hidden {
+                background-color: transparent;
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    &__NavLink {
         position: absolute;
         height: 100%;
         width: 100%;
@@ -57,24 +238,27 @@
         left: 0;
     }
 
-    &__NavLinkText{
+    &__NavLinkText {
         text-decoration: none;
         color: white;
         // text-transform: uppercase;
         display: block;
 
-        .Blog__NavItem:hover &{
-            &--Pink{
+        .Blog__NavItem:hover & {
+            &--Pink {
                 color: $mf-pink;
             }
-            &--Green{
+            &--Green {
                 color: $mf-green;
             }
-            &--Yellow{
+            &--Yellow {
                 color: $mf-yellow;
             }
-            &--Blue{
+            &--Blue {
                 color: $mf-blue;
+            }
+            &--White {
+                color: $white;
             }
         }
 
@@ -152,16 +336,16 @@
             padding: 1rem 2rem;
             @include bgColorOpacity($white, 0.9);
 
-            &--Pink{
+            &--Pink {
                 @include bgColorOpacity($mf-pink, 0.9);
             }
-            &--Blue{
+            &--Blue {
                 @include bgColorOpacity($mf-blue, 0.9);
             }
-            &--Yellow{
+            &--Yellow {
                 @include bgColorOpacity($mf-yellow, 0.9);
             }
-            &--Green{
+            &--Green {
                 @include bgColorOpacity($mf-green, 0.9);
             }
         }

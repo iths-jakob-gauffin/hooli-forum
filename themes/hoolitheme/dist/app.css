@@ -765,6 +765,8 @@
   max-width: 98rem;
   height: 6rem;
   margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .Blog__NavList {
@@ -772,6 +774,94 @@
   align-items: center;
   list-style: none;
   height: 100%;
+}
+
+.Blog #blogSearchButton {
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+  z-index: 10;
+}
+
+.Blog .hoverState--hidden {
+  width: 100%;
+  height: 100%;
+  background-color: none;
+}
+
+.Blog .hoverState {
+  background-color: #333333;
+}
+
+.Blog #blogSearchButton.active {
+  position: relative;
+  transform: translateX(-45rem);
+}
+
+.Blog #blogSearchButton.active::before {
+  background-color: none !important;
+}
+
+.Blog #blogSearchButton--Pink {
+  border: 1px solid white;
+  position: relative;
+}
+
+.Blog #blogSearchButton--Pink i {
+  color: #ff9393 !important;
+}
+
+.Blog #blogSearchButton--Pink.hidden {
+  position: absolute;
+}
+
+.Blog__SearchForm {
+  right: 0;
+  position: absolute;
+  z-index: 10;
+  transform: translateX(-25rem);
+  transition: transform 0.5s ease-in-out;
+  border: 1px solid yellow;
+}
+
+.Blog__SearchForm--hidden {
+  transform: translateX(100%);
+}
+
+.Blog__SearchInput {
+  font-family: Varela Round;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2, 5rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.03em;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333333;
+  font-size: 1.8rem;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  min-width: 100%;
+}
+
+.Blog__NavOverlay {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: linear-gradient(to right, transparent 15%, rgba(0, 0, 0, 0.8) 45%, black 70%);
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 0.5s ease-in-out;
+}
+
+.Blog__NavOverlay--hidden {
+  opacity: 0;
+  transform: translateX(calc(100% - 4rem));
 }
 
 .Blog__NavItem {
@@ -794,6 +884,54 @@
 
 .Blog__NavItem--Selected {
   background-color: #333333;
+}
+
+.Blog__NavItem--Search {
+  cursor: pointer;
+  padding: 0 2rem;
+  font-family: Varela Round;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.9rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.03em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.Blog__NavItem--Search.clicked::before {
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+
+.Blog__NavItem--Search.clicked {
+  position: relative;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+
+.Blog__NavItem .gray {
+  background-color: #333333;
+}
+
+.Blog__FadeHover {
+  background-color: transparent;
+  transition: all 2.5s ease-in-out;
+}
+
+.Blog__FadeHover--Active {
+  background-color: #333333;
+}
+
+.Blog__FadeHover--Active--Hidden {
+  background-color: transparent;
+}
+
+.Blog__FadeHover--Active--Hidden:hover {
+  background-color: transparent;
 }
 
 .Blog__NavLink {
@@ -824,6 +962,10 @@
 
 .Blog__NavItem:hover .Blog__NavLinkText--Blue {
   color: #7cc9fb;
+}
+
+.Blog__NavItem:hover .Blog__NavLinkText--White {
+  color: #ffffff;
 }
 
 .Blog__NavLinkText--PinkSelected {
@@ -1168,7 +1310,7 @@
   background-color: #333333;
   z-index: 1;
   transform: rotate(90deg) translate(0, 3rem);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .Aside__ReviewItem:hover::after {

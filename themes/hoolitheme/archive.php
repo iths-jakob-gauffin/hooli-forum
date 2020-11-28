@@ -21,7 +21,9 @@ get_header();
           </div>
 
         <h1 class="Archive__Title"><?php the_title(); ?></h1>
-        <p class="Archive__Subtitle"><?php echo get_field('subtitle'); ?></p>
+        <p class="Archive__Subtitle"><?php 
+        // echo var_dump($bgImage); 
+        echo get_field('subtitle'); ?></p>
 
         <ul class="Archive__List">
             <?php 

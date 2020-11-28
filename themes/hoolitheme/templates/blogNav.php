@@ -18,6 +18,13 @@
             <a href="<?php echo esc_url(site_url('/nyheter')); ?>" class="Blog__NavLink"></a>
             <span class="Blog__NavLinkText Blog__NavLinkText--Blue <?php echo is_page('nyheter') ? 'Blog__NavLinkText--BlueSelected' : null ?>">Nyheter</span>
         </li>
+        <li id="blogSearchButton" class="Blog__NavItem--Search hoverState--hidden <?php echo is_page('nyheter') ? 'Blog__NavItem--Selected' : null ?>">
+            <span class="Blog__NavLinkText Blog__NavLinkText--White <?php echo is_page('nyheter') ? 'Blog__NavLinkText--BlueSelected' : null ?>"><i class="fas fa-search"></i></span>
+        </li>
+        <form action="#" class="Blog__SearchForm Blog__SearchForm--hidden">
+            <input type="search" placeholder="sök i bloggen" class="Blog__SearchInput">
+        </form>
+        <div class="Blog__NavOverlay  Blog__NavOverlay--hidden"></div>
     </ul>
 </nav>
 

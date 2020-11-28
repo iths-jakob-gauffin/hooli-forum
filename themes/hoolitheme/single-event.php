@@ -7,7 +7,10 @@
         
         ?>  
             <div class="main-container">
-                <?php echo get_template_part('/templates/blogNav'); ?>
+                <?php echo get_template_part('/templates/blogNav');
+                // $fieldet = get_field('background_image'); 
+                // echo var_dump($fieldet);
+                ?>
                 <div class="SingleEvent">
                         <div class="SingleEvent__BackgroundImage" style="background: url(<?php  echo get_field('background_image')['sizes']['singleEventBackgroundImage']; ?>)"></div>
                         
